@@ -29,6 +29,10 @@ const CartContextProvider: React.FC<{
     price: 0,
   });
 
+  function addItem() {
+    setItems([]);
+  }
+
   function changeView(obj: {
     name: string;
     desc: string;
@@ -47,6 +51,7 @@ const CartContextProvider: React.FC<{
     items,
     inView,
     changeView,
+    addItem,
   };
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
