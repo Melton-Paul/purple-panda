@@ -4,7 +4,12 @@
   padding: 1rem;
   border-radius: 5px;
   max-width: 100%;
+  cursor: pointer;
 }
+.menu-card:hover {
+  opacity: 0.8;
+}
+
 .menu-card-img {
   max-width: 125px;
   max-height: 125px;

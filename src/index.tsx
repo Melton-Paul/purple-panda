@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import CartContextProvider from "./components/store/Cart-context";
 import LanguageContextProvider from "./components/store/Language-context";
 
 const root = ReactDOM.createRoot(
@@ -11,8 +12,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <LanguageContextProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <CartContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </CartContextProvider>
   </LanguageContextProvider>
 );
