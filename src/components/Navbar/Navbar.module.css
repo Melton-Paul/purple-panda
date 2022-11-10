@@ -2,13 +2,13 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  padding: 0.25rem 0.5rem;
   align-items: center;
   flex-wrap: wrap;
   z-index: 2;
   box-shadow: 0px 0px 5px 3px #9b9a9a;
   position: sticky;
   background: var(--color-primary);
-  padding: 0.5rem;
   color: var(--color-secondary);
 }
 
@@ -18,8 +18,7 @@
 }
 
 .navbar-img {
-  width: 100%;
-  max-width: 65px;
+  width: 65px;
   cursor: pointer;
   transform: translateY(2px);
   transition: 0.15s all;
@@ -86,7 +85,7 @@
   .navbar-list {
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     margin: 0;
     padding: 0.5rem 0;

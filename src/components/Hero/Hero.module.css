@@ -48,13 +48,12 @@
 }
 .navbar-language__container {
   position: absolute;
-  padding: 1rem;
+  padding: 0.75rem;
   border-radius: 0 0 0 15px;
   top: 0px;
-  box-shadow: 0 2px 5px 2px #9b9a9a;
   z-index: 2;
   right: 0;
-  background: var(--color-tertiary);
+  background: rgb(250, 222, 222);
   display: flex;
 }
 .navbar-language {
@@ -63,11 +62,10 @@
   color: white;
   font-weight: bold;
   border: none;
-  border-radius: 15px;
+  border-radius: 7px;
 }
 .navbar-language:hover {
   background: hotpink;
-  transform: translateY(2px);
 }
 
 .cta {

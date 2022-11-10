@@ -17,6 +17,7 @@ export default function Navbar() {
       <NavLink to="/">
         <img className={styles["navbar-img"]} src={navImg} alt="home" />
       </NavLink>
+
       <i
         className={`fa-solid ${isCollapsed ? "fa-bars" : "fa-x"} ${
           styles["navbar-toggle"]
@@ -52,7 +53,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/about">
           <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Order Online" : "Comprar Online"}
+            {languageCtx.english ? "Order" : "Comprar"}
           </li>
         </NavLink>
         <NavLink to="/location">
