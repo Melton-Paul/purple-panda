@@ -1,0 +1,33 @@
+.popular-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  max-width: 1040px;
+  margin: 2rem auto;
+  text-align: left;
+}
+
+.popular-section__cards {
+  display: grid;
+  gap: 1rem;
+}
+.popular-section__btn {
+  padding: 1rem 1.5rem;
+  background: black;
+  color: white;
+  border: none;
+  margin-top: 2rem;
+  justify-self: center;
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1000px) {
+  .popular-section__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .popular-section__btn {
+    align-self: center;
+    font-size: 1.2rem;
+  }
+}

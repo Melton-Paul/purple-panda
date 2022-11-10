@@ -1,0 +1,69 @@
+.contact-section {
+  padding: 1rem;
+  /* margin: 3rem 0; */
+  background: url("../../images/utensils.png");
+  background-attachment: fixed;
+  background-position: 10%;
+  background-color: beige;
+}
+.contact-section__title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+}
+.contact-map {
+  width: 100%;
+  border: none;
+}
+.contact-map__container {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid grey;
+}
+.contact-list li:last-of-type {
+  border-bottom: none;
+}
+.contact-info__section {
+  margin: 0.5rem 0;
+}
+
+.contact-info__container {
+  margin-top: 2rem;
+}
+
+.contact-info {
+  text-decoration: none;
+  color: black;
+}
+.contact-info i {
+  margin-right: 0.5rem;
+}
+.contact-info:hover {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .contact-section {
+    background-position: 30% 10%;
+  }
+}
