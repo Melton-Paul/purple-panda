@@ -26,6 +26,7 @@ const OrderCard: React.FC<{
   }
   React.useEffect(() => {
     if (cartCtx.inView.name !== "") {
+      window.scrollTo(0, 0);
       document.querySelector("body")!.style.overflow = "hidden";
     } else {
       document.querySelector("body")!.style.overflow = "auto";
