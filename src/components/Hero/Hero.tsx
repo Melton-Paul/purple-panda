@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router";
 import styles from "./Hero.module.css";
 import { LanguageContext } from "../store/Language-context";
-import { url } from "inspector";
 const food = require("../../images/food1.jpg");
 const truck = require("../../images/truck.jpg");
 

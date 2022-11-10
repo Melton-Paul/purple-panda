@@ -16,6 +16,7 @@ const LanguageContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
   function toggleEnglish(boolean: boolean) {
     setEnglish(boolean);
+    setShowLanguageModal(false);
   }
 
   React.useEffect(() => {
