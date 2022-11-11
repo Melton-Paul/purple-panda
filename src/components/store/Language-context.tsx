@@ -26,6 +26,15 @@ const LanguageContextProvider: React.FC<{ children: React.ReactNode }> = ({
   }, []);
 
   React.useEffect(() => {
+    if (showLanguageModal) {
+      window.scrollTo(0, 0);
+      document.querySelector("body")!.style.overflow = "hidden";
+    } else {
+      document.querySelector("body")!.style.overflow = "auto";
+    }
+  }, [showLanguageModal]);
+
+  React.useEffect(() => {
     localStorage.setItem("english", JSON.stringify(english));
   }, [english]);
 
