@@ -1,24 +1,26 @@
 import React from "react";
-import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
 import TranslateModal from "./components/TranslateModal/TranslateModal";
 import { LanguageContext } from "./components/store/Language-context";
-import Popular from "./components/Popular/Popular";
-import Contact from "./components/Contact/Contact";
 import OrderCard from "./components/Cards/OrderCard/OrderCard";
+import MainPage from "./components/Pages/Main";
+import { Route, Routes } from "react-router";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const languageCtx = React.useContext(LanguageContext);
 
   return (
-    <div>
+    <main>
       <Navbar />
       {languageCtx.showLanguageModal && <TranslateModal />}
-      <Hero />
-      <Popular />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="*" element={<MainPage />} />
+      </Routes>
       <OrderCard />
-    </div>
+    </main>
   );
 }
 

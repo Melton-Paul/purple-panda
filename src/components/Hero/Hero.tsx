@@ -19,7 +19,7 @@ export default function Hero() {
       cta: "Genuinely Filipino.",
       ctaBtn: "Menu",
       ctaAct: "",
-      ctaLoc: "/Menu",
+      ctaLoc: "/menu",
       background: food,
     },
   ];

@@ -4,10 +4,11 @@ import { CartContext } from "../../store/Cart-context";
 
 const MenuCard: React.FC<{
   name: string;
-  desc: string;
-  img: string;
+  desc?: string;
+  img?: string;
   price: number;
-}> = ({ name, desc, img, price }) => {
+  moreInfo?: boolean;
+}> = ({ name, desc = "", img = "", price, moreInfo = true }) => {
   const cartCtx = React.useContext(CartContext);
 
   return (
@@ -18,6 +19,12 @@ const MenuCard: React.FC<{
       <div>
         <h3 className={styles["menu-card__name"]}>{name}</h3>
         <p className={styles["menu-card__desc"]}>{desc}</p>
+        {moreInfo && (
+          <span className={styles.tip}>
+            <i className="fa-solid fa-hand-pointer"></i>
+            More Info
+          </span>
+        )}
       </div>
       <img src={img} alt="" className={styles["menu-card-img"]} />
     </div>
