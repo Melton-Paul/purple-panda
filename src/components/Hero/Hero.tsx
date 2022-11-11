@@ -26,7 +26,6 @@ export default function Hero() {
   ];
   const [counter, setCounter] = React.useState(0);
   const navigate = useNavigate();
-  const languageCtx = React.useContext(LanguageContext);
 
   React.useEffect(() => {
     setInterval(() => {

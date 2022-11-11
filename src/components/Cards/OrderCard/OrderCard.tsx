@@ -3,20 +3,20 @@ import styles from "./OrderCard.module.css";
 import { CartContext } from "../../store/Cart-context";
 
 const OrderCard = () => {
-  const [quantity, setQuantity] = React.useState(1);
+  //   const [quantity, setQuantity] = React.useState(1);
   const cartCtx = React.useContext(CartContext);
 
-  function updateQuantity(up: boolean) {
-    setQuantity((prev) => {
-      if (up) {
-        return prev + 1;
-      } else if (prev <= 1) {
-        return prev;
-      } else {
-        return prev - 1;
-      }
-    });
-  }
+  //   function updateQuantity(up: boolean) {
+  //     setQuantity((prev) => {
+  //       if (up) {
+  //         return prev + 1;
+  //       } else if (prev <= 1) {
+  //         return prev;
+  //       } else {
+  //         return prev - 1;
+  //       }
+  //     });
+  //   }
   function closeModal() {
     cartCtx.changeView({ name: "", desc: "", img: "", price: 0 });
   }
