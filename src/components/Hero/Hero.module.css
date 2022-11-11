@@ -17,7 +17,7 @@
 }
 
 .hero-title {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
   letter-spacing: 1px;
 }
@@ -81,10 +81,10 @@
 }
 
 .forward {
-  right: 10px;
+  right: 0px;
 }
 .back {
-  left: 10px;
+  left: 0px;
 }
 
 /* rgba(211, 155, 3, 0.7); */
@@ -102,9 +102,9 @@
 }
 .hero-overlay__center {
   position: relative;
-  border: 3px solid rgb(233, 227, 227);
+  /* border: 3px solid rgb(233, 227, 227); */
   padding: 3rem 1rem;
-  top: 5%;
+  top: 0;
   border-radius: 15px;
   width: 80%;
   max-height: 200px;
@@ -117,15 +117,17 @@
   letter-spacing: 1px;
 }
 @media screen and (min-width: 768px) {
-  .hero-overlay__center {
-    border: none;
-  }
-
   .cta {
     margin: 1rem;
   }
   .hero-title {
     font-size: 4rem;
+  }
+  .forward {
+    right: 10px;
+  }
+  .back {
+    left: 10px;
   }
   .cta-button {
     margin-top: 0;
