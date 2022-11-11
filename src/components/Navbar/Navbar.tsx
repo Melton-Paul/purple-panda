@@ -11,11 +11,19 @@ export default function Navbar() {
   function toggleCollapsed() {
     setIsCollapsed((prev) => !prev);
   }
+  function scrollTop() {
+    window.scrollTo(0, 0);
+  }
 
   return (
     <nav className={styles.navbar}>
       <NavLink to="/">
-        <img className={styles["navbar-img"]} src={navImg} alt="home" />
+        <img
+          className={styles["navbar-img"]}
+          src={navImg}
+          alt="home"
+          onClick={scrollTop}
+        />
       </NavLink>
 
       <i
@@ -46,6 +54,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/">
           <img
+            onClick={scrollTop}
             className={`${styles["navbar-img"]} ${styles.bigDisplay}`}
             src={navImg}
             alt="home"
