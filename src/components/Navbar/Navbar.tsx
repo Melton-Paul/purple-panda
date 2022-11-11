@@ -53,7 +53,7 @@ export default function Navbar() {
         </NavLink>
         <NavLink to="/about">
           <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Order" : "Comprar"}
+            {languageCtx.english ? "About Us" : "Comprar"}
           </li>
         </NavLink>
         <NavLink to="/location">
@@ -67,6 +67,16 @@ export default function Navbar() {
           </li>
         </NavLink>
       </ul>
+      <div className={styles["navbar-language__container"]}>
+        <button
+          className={styles["navbar-language"]}
+          onClick={() =>
+            languageCtx.toggleEnglish(languageCtx.english ? false : true)
+          }
+        >
+          {languageCtx.english ? "Tingnan Sa Filipino" : "View In English"}
+        </button>
+      </div>
     </nav>
   );
 }

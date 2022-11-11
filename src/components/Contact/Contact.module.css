@@ -1,6 +1,5 @@
 .contact-section {
   padding: 1rem;
-  /* margin: 3rem 0; */
   background: url("../../images/utensils.png");
   background-attachment: fixed;
   background-position: 10%;
@@ -23,6 +22,10 @@
 .contact-map__container {
   margin-top: 2rem;
   width: 100%;
+}
+.contact-container__text {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
 }
 
 .contact-list {

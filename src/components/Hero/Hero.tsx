@@ -110,16 +110,6 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className={styles["navbar-language__container"]}>
-          <button
-            className={styles["navbar-language"]}
-            onClick={() =>
-              languageCtx.toggleEnglish(languageCtx.english ? false : true)
-            }
-          >
-            {languageCtx.english ? "Tingnan Sa Filipino" : "View In English"}
-          </button>
-        </div>
       </div>
     </section>
   );

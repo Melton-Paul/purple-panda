@@ -2,11 +2,7 @@ import React from "react";
 import styles from "./OrderCard.module.css";
 import { CartContext } from "../../store/Cart-context";
 
-const OrderCard: React.FC<{
-  name: string;
-  description: string;
-  img: string;
-}> = ({ name, description, img }) => {
+const OrderCard = () => {
   const [quantity, setQuantity] = React.useState(1);
   const cartCtx = React.useContext(CartContext);
 
@@ -42,11 +38,16 @@ const OrderCard: React.FC<{
             onClick={closeModal}
           ></div>
           <div className={styles.modal}>
-            <img className={styles["modal-img"]} src={img} alt="" />
+            <img
+              className={styles["modal-img"]}
+              src={cartCtx.inView.img}
+              alt=""
+            />
             <div className={styles["modal-body"]}>
-              <h3 className={styles.name}>{name}</h3>
-              <p>{description}</p>
-              <div className={styles["quantity-container"]}>
+              <h3 className={styles.name}>{cartCtx.inView.name}</h3>
+              <p>{cartCtx.inView.desc}</p>
+              <p className={styles.price}>{cartCtx.inView.price}$</p>
+              {/* <div className={styles["quantity-container"]}>
                 <button
                   onClick={() => updateQuantity(false)}
                   disabled={quantity <= 1}
@@ -61,7 +62,7 @@ const OrderCard: React.FC<{
                 >
                   +
                 </button>
-              </div>
+              </div> */}
               <h4>How to get it</h4>
               <div className={styles.location}>
                 <p>Store Pickup</p>
@@ -72,7 +73,7 @@ const OrderCard: React.FC<{
                 <button className={styles["btn-cancel"]} onClick={closeModal}>
                   X
                 </button>
-                <button className={styles["btn-submit"]}>Add to Order</button>
+                {/* <button className={styles["btn-submit"]}>Add to Order</button> */}
               </div>
             </div>
           </div>

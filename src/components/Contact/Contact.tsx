@@ -6,7 +6,7 @@ const Contact = () => {
     <div className={styles["contact-section"]}>
       <h3 className="section-title">Contact Us</h3>
       <div className={styles["contact-container"]}>
-        <div>
+        <div className={styles["contact-container__text"]}>
           <ul className={styles["contact-list"]}>
             <li>
               <p>Monday</p>

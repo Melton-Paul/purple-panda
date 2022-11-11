@@ -35,3 +35,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* Scroll Bar */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(9, 177, 255, 0.2);
+  height: 40px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(192, 187, 187);
+}

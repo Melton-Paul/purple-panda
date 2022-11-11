@@ -5,6 +5,15 @@ import { LanguageContext } from "../store/Language-context";
 export default function TranslateModal() {
   const LanguageCtx = React.useContext(LanguageContext);
 
+  React.useEffect(() => {
+    if (LanguageCtx.showLanguageModal) {
+      window.scrollTo(0, 0);
+      document.querySelector("body")!.style.overflow = "hidden";
+    } else {
+      document.querySelector("body")!.style.overflow = "auto";
+    }
+  }, [LanguageCtx.showLanguageModal]);
+
   return (
     <>
       <div className={styles["modal-background"]}></div>

@@ -46,27 +46,6 @@
 .hero-brands__link:hover i {
   transform: scale(1.1);
 }
-.navbar-language__container {
-  position: absolute;
-  padding: 0.75rem;
-  border-radius: 0 0 0 15px;
-  top: 0px;
-  z-index: 2;
-  right: 0;
-  background: rgb(250, 222, 222);
-  display: flex;
-}
-.navbar-language {
-  padding: 0.5rem 1rem;
-  background: var(--color-secondary);
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 7px;
-}
-.navbar-language:hover {
-  background: hotpink;
-}
 
 .cta {
   font-size: 1.8rem;
@@ -125,6 +104,7 @@
   position: relative;
   border: 3px solid rgb(233, 227, 227);
   padding: 3rem 1rem;
+  top: 5%;
   border-radius: 15px;
   width: 80%;
   max-height: 200px;
@@ -137,11 +117,15 @@
   letter-spacing: 1px;
 }
 @media screen and (min-width: 768px) {
+  .hero-overlay__center {
+    border: none;
+  }
+
   .cta {
     margin: 1rem;
   }
   .hero-title {
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .cta-button {
     margin-top: 0;

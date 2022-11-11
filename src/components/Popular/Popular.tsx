@@ -33,7 +33,7 @@ const Popular = () => {
           price={5.99}
         />
       </div>
-      <button className={styles["popular-section__btn"]}>Order Now</button>
+      <button className={styles["popular-section__btn"]}>View Full Menu</button>
     </div>
   );
 };
