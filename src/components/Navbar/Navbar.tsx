@@ -16,7 +16,7 @@ export default function Navbar() {
     setIsCollapsed((prev) => !prev);
   }
   function closeMenu() {
-    setIsCollapsed(false);
+    setIsCollapsed(true);
   }
 
   const goToHomeAndScroll = async (location: string) => {
