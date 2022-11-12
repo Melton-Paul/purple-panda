@@ -15,6 +15,9 @@ export default function Navbar() {
   function toggleCollapsed() {
     setIsCollapsed((prev) => !prev);
   }
+  function closeMenu() {
+    setIsCollapsed(false);
+  }
 
   const goToHomeAndScroll = async (location: string) => {
     await navigate("/");
@@ -32,7 +35,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles["navbar-left"]}>
-        <NavLink to="/" onClick={toggleCollapsed}>
+        <NavLink to="/" onClick={closeMenu}>
           <img className={styles["navbar-img"]} src={navImg} alt="home" />
         </NavLink>
         {isCollapsed && (
@@ -56,7 +59,7 @@ export default function Navbar() {
         className={`${styles["navbar-list"]} ${
           isCollapsed && styles.collapsed
         }`}
-        onClick={toggleCollapsed}
+        onClick={closeMenu}
       >
         <NavLink to="/">
           <li className={styles["navbar-list__item"]}>
