@@ -28,6 +28,7 @@ button {
   text-align: center;
   margin-bottom: 3rem;
   font-size: 2rem;
+  text-shadow: 1px 1px var(--color-secondary);
 }
 
 code {

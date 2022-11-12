@@ -6,6 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import CartContextProvider from "./components/store/Cart-context";
 import LanguageContextProvider from "./components/store/Language-context";
+import ScrollToTop from "./components/scrollToTop";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -14,6 +15,7 @@ root.render(
   <LanguageContextProvider>
     <CartContextProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </CartContextProvider>

@@ -1,0 +1,15 @@
+.scroll-btn {
+  position: fixed;
+  right: 5px;
+  top: 90%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  color: white;
+  font-size: 2rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

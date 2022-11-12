@@ -1,5 +1,5 @@
 .modal {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -13,7 +13,7 @@
 }
 
 .modal-background {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
@@ -33,24 +33,6 @@
 .name {
   font-size: 1.4rem;
 }
-.quantity-container {
-  margin-bottom: 2rem;
-}
-.quantity-btn {
-  padding: 0.25rem 0.5rem;
-  border-radius: 6px;
-  border: none;
-  font-size: 1.3rem;
-}
-.quantity {
-  font-size: 1.5rem;
-  margin: 0 0.75rem;
-}
-
-.location {
-  padding-left: 2rem;
-  margin: 2rem 0;
-}
 
 .price {
   font-weight: bold;
@@ -58,32 +40,28 @@
   letter-spacing: 1.5px;
 }
 
-.btn-container {
-  display: flex;
-  width: 100%;
-}
-
-.btn-container button {
-  border-radius: 5px;
-  border: none;
-  box-shadow: 0 0 7px 1px #838383;
-}
-
 .btn-cancel {
   font-size: 1.4rem;
   padding: 0.5rem 1rem;
   background: white;
+  color: black;
   margin-right: 0.5rem;
+  position: absolute;
+  top: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transition: 0.3s all;
 }
-.btn-submit {
-  flex-grow: 1;
+.btn-cancel:hover {
   background: black;
   color: white;
 }
 
 @media screen and (min-width: 768px) {
   .modal {
-    max-width: 600px;
+    max-width: 400px;
     top: 15%;
     left: auto;
     bottom: auto;

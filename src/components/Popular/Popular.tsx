@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Popular.module.css";
+import { Link } from "react-router-dom";
 import MenuCard from "../Cards/MenuCard/MenuCard";
 const test = require("../../images/test.webp");
 
@@ -33,7 +34,11 @@ const Popular = () => {
           price={5.99}
         />
       </div>
-      <button className={styles["popular-section__btn"]}>View Full Menu</button>
+      <Link to="/menu">
+        <button className={styles["popular-section__btn"]}>
+          View Full Menu
+        </button>
+      </Link>
     </div>
   );
 };

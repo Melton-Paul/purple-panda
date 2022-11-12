@@ -1,9 +1,10 @@
 .contact-section {
   padding: 1rem;
-  background: url("../../images/utensils.png");
+  background: url("../../images/pattern.jpg");
   background-attachment: fixed;
   background-position: 10%;
-  background-color: beige;
+  background-color: var(--color-primary);
+  background-repeat: repeat;
   padding-bottom: 3rem;
 }
 .contact-section__title {
@@ -25,6 +26,7 @@
 }
 .contact-container__text {
   background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
   padding: 1rem;
 }
 

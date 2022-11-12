@@ -1,31 +1,51 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import { scroller } from "react-scroll";
 import { LanguageContext } from "../store/Language-context";
+import { useNavigate } from "react-router-dom";
 const navImg = require("../../images/tPanda.png");
 
 export default function Navbar() {
   const [isCollapsed, setIsCollapsed] = React.useState(true);
   const languageCtx = React.useContext(LanguageContext);
+  const navigate = useNavigate();
+  const useScroller = scroller;
 
   function toggleCollapsed() {
     setIsCollapsed((prev) => !prev);
   }
-  function scrollTop() {
-    window.scrollTo(0, 0);
-  }
+
+  const goToHomeAndScroll = async (location: string) => {
+    await navigate("/");
+    await setTimeout(
+      () =>
+        useScroller.scrollTo(location, {
+          duration: 75,
+          smooth: true,
+          offset: 50,
+        }),
+      150
+    );
+  };
 
   return (
     <nav className={styles.navbar}>
-      <NavLink to="/">
-        <img
-          className={styles["navbar-img"]}
-          src={navImg}
-          alt="home"
-          onClick={scrollTop}
-        />
-      </NavLink>
-
+      <div className={styles["navbar-left"]}>
+        <NavLink to="/" onClick={toggleCollapsed}>
+          <img className={styles["navbar-img"]} src={navImg} alt="home" />
+        </NavLink>
+        {isCollapsed && (
+          <a
+            href="tel:417-791-1529"
+            className={`${styles.call}`}
+            style={{ color: "black", fontWeight: "bold", letterSpacing: "2px" }}
+          >
+            <i className="fa-solid fa-phone"></i>
+            <p>417-791-1529</p>
+          </a>
+        )}
+      </div>
       <i
         className={`fa-solid ${isCollapsed ? "fa-bars" : "fa-x"} ${
           styles["navbar-toggle"]
@@ -36,10 +56,37 @@ export default function Navbar() {
         className={`${styles["navbar-list"]} ${
           isCollapsed && styles.collapsed
         }`}
+        onClick={toggleCollapsed}
       >
         <NavLink to="/">
           <li className={styles["navbar-list__item"]}>
             {languageCtx.english ? "Home" : "Hogar"}
+          </li>
+        </NavLink>
+        <li
+          className={styles["navbar-list__item"]}
+          onClick={() => goToHomeAndScroll("contact")}
+        >
+          {languageCtx.english ? "Location" : "Ubicación"}
+        </li>
+        <li
+          className={styles["navbar-list__item"]}
+          onClick={() => goToHomeAndScroll("contact")}
+        >
+          {languageCtx.english ? "Contact" : "Contacto"}
+        </li>
+        <li>
+          <NavLink to="/">
+            <img
+              className={`${styles["navbar-img"]} ${styles.bigDisplay}`}
+              src={navImg}
+              alt="home"
+            />
+          </NavLink>
+        </li>
+        <NavLink to="/about">
+          <li className={styles["navbar-list__item"]}>
+            {languageCtx.english ? "About Us" : "Comprar"}
           </li>
         </NavLink>
         <NavLink to="/menu">
@@ -47,34 +94,15 @@ export default function Navbar() {
             {languageCtx.english ? "Menu" : "Menú"}
           </li>
         </NavLink>
-        <NavLink to="/contact">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Contact" : "Contacto"}
-          </li>
-        </NavLink>
-        <NavLink to="/">
-          <img
-            onClick={scrollTop}
-            className={`${styles["navbar-img"]} ${styles.bigDisplay}`}
-            src={navImg}
-            alt="home"
-          />
-        </NavLink>
-        <NavLink to="/about">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "About Us" : "Comprar"}
-          </li>
-        </NavLink>
-        <NavLink to="/location">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Location" : "Ubicación"}
-          </li>
-        </NavLink>
-        <NavLink to="/location">
-          <li className={styles["navbar-list__item"]}>
-            <i className="fa-solid fa-cart-shopping"></i>
-          </li>
-        </NavLink>
+        <li className={styles["navbar-list__item"]}>
+          <a
+            href="tel:417-791-1529"
+            className={`${styles.call} ${styles["call-primary"]}`}
+          >
+            <i className="fa-solid fa-phone"></i>
+            <p>Call</p>
+          </a>
+        </li>
       </ul>
       <div className={styles["navbar-language__container"]}>
         <button

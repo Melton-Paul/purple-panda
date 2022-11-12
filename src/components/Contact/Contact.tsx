@@ -1,69 +1,72 @@
 import React from "react";
 import styles from "./Contact.module.css";
+import { Element } from "react-scroll";
 
 const Contact = () => {
   return (
-    <div className={styles["contact-section"]}>
-      <h3 className="section-title">Contact Us</h3>
-      <div className={styles["contact-container"]}>
-        <div className={styles["contact-container__text"]}>
-          <ul className={styles["contact-list"]}>
-            <li>
-              <p>Monday</p>
-              <p>11:00 AM - 8:00 PM</p>
-            </li>
-            <li>
-              <p>Tuesday</p>
-              <p>Closed</p>
-            </li>
-            <li>
-              <p>Wednesday</p>
-              <p>Closed</p>
-            </li>
-            <li>
-              <p>Thursday - Saturday</p>
-              <p>11:00 AM - 8:00 PM</p>
-            </li>
+    <Element name="contact">
+      <div className={styles["contact-section"]}>
+        <h3 className="section-title">Contact Us</h3>
+        <div className={styles["contact-container"]}>
+          <div className={styles["contact-container__text"]}>
+            <ul className={styles["contact-list"]}>
+              <li>
+                <p>Monday</p>
+                <p>11:00 AM - 8:00 PM</p>
+              </li>
+              <li>
+                <p>Tuesday</p>
+                <p>Closed</p>
+              </li>
+              <li>
+                <p>Wednesday</p>
+                <p>Closed</p>
+              </li>
+              <li>
+                <p>Thursday - Saturday</p>
+                <p>11:00 AM - 8:00 PM</p>
+              </li>
 
-            <li>
-              <p>Sunday</p>
-              <p>11:00 AM - 6:00 PM</p>
-            </li>
-          </ul>
-          <div className={styles["contact-info__container"]}>
-            <div className={styles["contact-info__section"]}>
-              <a href="tel:417-791-1529" className={styles["contact-info"]}>
-                <i className="fa-solid fa-phone"></i>
-                417-791-1529
-              </a>
-            </div>
-            <div>
-              <a
-                href="https://www.google.com/maps/dir//2166+State+Hwy+248,+Branson,+MO+65616/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87cf04b7527403bf:0xe71d03b322d11c5?sa=X&ved=2ahUKEwjLhNKQ0aT7AhVRkmoFHU5uACwQwwV6BAgIEAI"
-                target="_blank"
-                rel="noreferrer"
-                className={styles["contact-info"]}
-              >
-                <i className="fa-solid fa-location-dot"></i>
-                2166 State Hwy. 248 Branson, MO 65616
-              </a>
+              <li>
+                <p>Sunday</p>
+                <p>11:00 AM - 6:00 PM</p>
+              </li>
+            </ul>
+            <div className={styles["contact-info__container"]}>
+              <div className={styles["contact-info__section"]}>
+                <a href="tel:417-791-1529" className={styles["contact-info"]}>
+                  <i className="fa-solid fa-phone"></i>
+                  417-791-1529
+                </a>
+              </div>
+              <div className={styles["contact-info__section"]}>
+                <a
+                  href="https://www.google.com/maps/dir//2166+State+Hwy+248,+Branson,+MO+65616/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87cf04b7527403bf:0xe71d03b322d11c5?sa=X&ved=2ahUKEwjLhNKQ0aT7AhVRkmoFHU5uACwQwwV6BAgIEAI"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={styles["contact-info"]}
+                >
+                  <i className="fa-solid fa-location-dot"></i>
+                  2166 State Hwy. 248 Branson, MO 65616
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div className={styles["contact-map__container"]}>
-          <iframe
-            className={styles["contact-map"]}
-            title="purple panda location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.27003224407!2d-93.2511184492323!3d36.66800798273128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf03238e56137d%3A0xb89fb32b603ad226!2sPurple%20Panda%20Filipino%20Food!5e0!3m2!1sen!2sus!4v1668118915036!5m2!1sen!2sus"
-            width="400"
-            height="300"
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div className={styles["contact-map__container"]}>
+            <iframe
+              className={styles["contact-map"]}
+              title="purple panda location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.27003224407!2d-93.2511184492323!3d36.66800798273128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf03238e56137d%3A0xb89fb32b603ad226!2sPurple%20Panda%20Filipino%20Food!5e0!3m2!1sen!2sus!4v1668118915036!5m2!1sen!2sus"
+              width="400"
+              height="300"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 export default Contact;
