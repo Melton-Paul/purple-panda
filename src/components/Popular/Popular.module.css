@@ -6,11 +6,11 @@
 }
 .popular-section__img {
   width: 100%;
-  max-width: 370px;
-  height: 500px;
+  max-width: 350px;
+  height: 300px;
   border-radius: 30px;
   object-fit: cover;
-  transform: translate(-0.5rem, 2rem);
+  transform: translate(-0.8rem, 4rem);
   transition: 0.5s all;
 }
 
@@ -18,21 +18,22 @@
   border-radius: 5px;
   background: var(--color-secondary);
   display: flex;
-  max-width: 370px;
-  height: 500px;
+  max-width: 350px;
+  height: 350px;
+  white-space: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   border-radius: 30px;
-  transform: translate(0.5rem, -5rem);
+  transform: translate(0.7rem, -4rem);
   transition: 0.5s all;
   padding: 10rem 5rem;
   width: 100%;
   box-sizing: border-box;
 }
 .popular-title {
-  font-size: 2.3rem;
+  font-size: 2rem;
   white-space: nowrap;
   margin-bottom: 1rem;
 }

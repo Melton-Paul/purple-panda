@@ -13,7 +13,6 @@ body {
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: ;
 }
 
 h1,
@@ -42,7 +41,7 @@ i {
   margin: 0;
   padding: 2rem;
   letter-spacing: -2px;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Gluten", cursive;
   font-weight: 800;
   color: white;
