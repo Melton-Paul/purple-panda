@@ -91,7 +91,7 @@ export default function Hero() {
           <p className={styles["hero-brands__title"]}>Follow Us!</p>
           <div>
             <a
-              href="https://www.facebook.com/purplepandafilipinofood"
+              href="https://www.instagram.com/purplepandafilipinofood/"
               target="_blank"
               rel="noreferrer"
               className={styles["hero-brands__link"]}

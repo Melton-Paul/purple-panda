@@ -96,11 +96,11 @@
   .popular-title__container {
     transform: translate(-2rem, -2rem);
     padding: 15rem 7rem;
-    height: 880px;
+    height: 600px;
     max-width: 100%;
   }
   .popular-section__img {
-    height: 880px;
+    height: 600px;
     max-width: 100%;
     transform: translate(2rem, 2rem);
   }

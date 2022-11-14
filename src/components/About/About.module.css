@@ -69,12 +69,12 @@
   .about-img {
     transform: translate(-2rem, 1rem);
     max-width: 100%;
-    height: 800px;
+    height: 600px;
     order: 2;
   }
   .about-text__container {
     max-width: 100%;
-    height: 800px;
+    height: 600px;
     transform: translate(2rem, -1rem);
     padding: 5rem;
   }
