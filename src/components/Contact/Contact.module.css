@@ -1,11 +1,11 @@
 .contact-section {
-  padding: 1rem;
+  padding: 3rem 1rem;
   background: url("../../images/pattern.jpg");
   background-attachment: fixed;
   background-position: 10%;
   background-color: var(--color-primary);
   background-repeat: repeat;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
 }
 
 .contact-container {
@@ -14,12 +14,11 @@
 }
 .contact-map {
   width: 100%;
+  height: 500px;
+  margin-top: 2rem;
   border: none;
 }
-.contact-map__container {
-  margin-top: 2rem;
-  width: 100%;
-}
+
 .contact-container__text {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(2px);
@@ -62,7 +61,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
-    max-width: 1040px;
+    max-width: 1400px;
     margin: 0 auto;
   }
   .contact-section {

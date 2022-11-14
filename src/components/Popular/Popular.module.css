@@ -1,9 +1,12 @@
 .popular-section {
   display: grid;
-  margin: 4rem 1rem;
+  width: 100%;
+  margin: 1rem 0;
+  justify-items: center;
 }
 .popular-section__img {
   width: 100%;
+  max-width: 370px;
   height: 500px;
   border-radius: 30px;
   object-fit: cover;
@@ -15,41 +18,64 @@
   border-radius: 5px;
   background: var(--color-secondary);
   display: flex;
+  max-width: 370px;
+  height: 500px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   border-radius: 30px;
-  transform: translate(1.5rem, -2rem);
+  transform: translate(0.5rem, -5rem);
   transition: 0.5s all;
   padding: 10rem 5rem;
   width: 100%;
   box-sizing: border-box;
 }
 .popular-title {
-  font-size: 3rem;
+  font-size: 2.3rem;
   white-space: nowrap;
+  margin-bottom: 1rem;
+}
+.popular-name {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 0;
+  border-bottom: 1px solid white;
 }
 
 .popular-section__btn {
   padding: 1rem 1.5rem;
   background: white;
-  border: none;
+  border: 1px solid white;
   border-radius: 30px;
-  margin-top: 2rem;
+  margin-top: 1rem;
   border-radius: 5px;
-}
-.popular-section a {
-  text-align: center;
   text-decoration: none;
   color: black;
   font-size: 1.5rem;
   font-family: "Gluten";
   letter-spacing: 1px;
+  white-space: nowrap;
 }
+.popular-section__btn:hover {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
 .popular-section:hover .popular-title__container,
 .popular-section:hover .popular-section__img {
   transform: none;
+}
+
+@media screen and (min-width: 400px) {
+  .popular-section__img {
+    max-width: 400px;
+    transform: translate(-2rem, 2rem);
+  }
+  .popular-title__container {
+    max-width: 400px;
+    transform: translate(2.5rem, -4rem);
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -57,20 +83,24 @@
     align-self: center;
     font-size: 1.2rem;
   }
+  .popular-title {
+    font-size: 3rem;
+  }
 
   .popular-section {
+    max-width: 1600px;
+    margin: 4rem auto;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
   }
   .popular-title__container {
-    transform: translate(-2rem, -1rem);
+    transform: translate(-2rem, -2rem);
     padding: 15rem 7rem;
+    height: 880px;
+    max-width: 100%;
   }
   .popular-section__img {
-    height: 830px;
+    height: 880px;
     max-width: 100%;
-    transform: translate(2rem, 1rem);
+    transform: translate(2rem, 2rem);
   }
 }

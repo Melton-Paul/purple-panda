@@ -26,7 +26,7 @@ export default function Navbar() {
         useScroller.scrollTo(location, {
           duration: 75,
           smooth: true,
-          offset: 50,
+          offset: -300,
         }),
       150
     );
@@ -87,11 +87,14 @@ export default function Navbar() {
             />
           </NavLink>
         </li>
-        <NavLink to="/about">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "About Us" : "Comprar"}
-          </li>
-        </NavLink>
+        <li
+          className={styles["navbar-list__item"]}
+          onClick={() => {
+            goToHomeAndScroll("about");
+          }}
+        >
+          {languageCtx.english ? "About Us" : "Comprar"}
+        </li>
         <NavLink to="/menu">
           <li className={styles["navbar-list__item"]}>
             {languageCtx.english ? "Menu" : "Menú"}

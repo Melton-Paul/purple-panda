@@ -8,6 +8,11 @@ const About = () => {
     <Element name="about">
       <div className={styles["about-container"]}>
         <div className={styles.about}>
+          <img
+            src={temp}
+            alt="The owner smiling and waving while leaning out of the food truck window"
+            className={styles["about-img"]}
+          />
           <div className={styles["about-text__container"]}>
             <h3 className="section-title">Our Journey</h3>
             <p className={styles["about-text"]}>
@@ -20,11 +25,6 @@ const About = () => {
               repellat fuga.
             </p>
           </div>
-          <img
-            src={temp}
-            alt="The owner smiling and waving while leaning out of the food truck window"
-            className={styles["about-img"]}
-          />
         </div>
       </div>
     </Element>

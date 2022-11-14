@@ -23,7 +23,15 @@ const Contact = () => {
                 <p>Closed</p>
               </li>
               <li>
-                <p>Thursday - Saturday</p>
+                <p>Thursday</p>
+                <p>11:00 AM - 8:00 PM</p>
+              </li>
+              <li>
+                <p>Friday</p>
+                <p>11:00 AM - 8:00 PM</p>
+              </li>
+              <li>
+                <p>Saturday</p>
                 <p>11:00 AM - 8:00 PM</p>
               </li>
 
@@ -52,18 +60,14 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className={styles["contact-map__container"]}>
-            <iframe
-              className={styles["contact-map"]}
-              title="purple panda location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.27003224407!2d-93.2511184492323!3d36.66800798273128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf03238e56137d%3A0xb89fb32b603ad226!2sPurple%20Panda%20Filipino%20Food!5e0!3m2!1sen!2sus!4v1668118915036!5m2!1sen!2sus"
-              width="400"
-              height="300"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+          <iframe
+            className={styles["contact-map"]}
+            title="purple panda location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3200.27003224407!2d-93.2511184492323!3d36.66800798273128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf03238e56137d%3A0xb89fb32b603ad226!2sPurple%20Panda%20Filipino%20Food!5e0!3m2!1sen!2sus!4v1668118915036!5m2!1sen!2sus"
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </Element>

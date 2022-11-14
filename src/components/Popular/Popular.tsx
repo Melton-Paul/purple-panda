@@ -6,18 +6,23 @@ const test = require("../../images/test.webp");
 const Popular = () => {
   return (
     <div className={styles["popular-section"]}>
-      <img
-        src={test}
-        alt="Todays special"
-        className={styles["popular-section__img"]}
-      />
+      <Link to="/menu">
+        <img
+          src={test}
+          alt="Todays special"
+          className={styles["popular-section__img"]}
+        />
+      </Link>
       <div className={styles["popular-title__container"]}>
         <h2 className={styles["popular-title"]}>Today's Special</h2>
-        <p>Lobster Rangu </p>
+        <p className={styles["popular-name"]}>Lobster Rangu </p>
         <p>Get it quick, it's bound to run out!</p>
-        <button className={styles["popular-section__btn"]}>
-          <Link to="/menu">Call Ahead</Link>
-        </button>
+        <Link to="/menu" className={styles["popular-section__btn"]}>
+          Call Ahead
+        </Link>
+        <Link to="/menu" className={styles["popular-section__btn"]}>
+          See Full Menu
+        </Link>
       </div>
     </div>
   );
