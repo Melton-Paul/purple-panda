@@ -7,10 +7,6 @@
   background-repeat: repeat;
   padding-bottom: 3rem;
 }
-.contact-section__title {
-  text-align: center;
-  margin-bottom: 3rem;
-}
 
 .contact-container {
   display: flex;

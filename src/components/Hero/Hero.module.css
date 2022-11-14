@@ -120,6 +120,9 @@
   .cta {
     margin: 1rem;
   }
+  .hero {
+    height: 600px;
+  }
   .hero-title {
     font-size: 4rem;
   }

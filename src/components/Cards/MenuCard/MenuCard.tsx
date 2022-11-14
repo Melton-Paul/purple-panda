@@ -16,7 +16,7 @@ const MenuCard: React.FC<{
       className={styles["menu-card"]}
       onClick={() => cartCtx.changeView({ name, desc, img, price })}
     >
-      <div>
+      <div className={styles["menu-card__info"]}>
         <h3 className={styles["menu-card__name"]}>{name}</h3>
         <p className={styles["menu-card__desc"]}>{desc}</p>
         {moreInfo && (

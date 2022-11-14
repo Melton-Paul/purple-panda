@@ -1,35 +1,76 @@
 .popular-section {
+  display: grid;
+  margin: 2rem 1rem;
+}
+.popular-section__img {
+  width: 100%;
+  height: 500px;
+  border-radius: 30px;
+  object-fit: cover;
+  transform: translate(-0.5rem, 2rem);
+  transition: 0.5s all;
+}
+
+.popular-title__container {
+  border-radius: 5px;
+  background: var(--color-secondary);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
-  max-width: 1040px;
-  margin: 2rem auto;
-  text-align: left;
+  align-items: center;
+  color: white;
+  border-radius: 30px;
+  transform: translate(1.5rem, -2rem);
+  transition: 0.5s all;
+  padding: 10rem 5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+.popular-title {
+  font-size: 3rem;
+  white-space: nowrap;
 }
 
-.popular-section__cards {
-  display: grid;
-  gap: 1rem;
-}
 .popular-section__btn {
   padding: 1rem 1.5rem;
-  background: black;
-  color: white;
+  background: white;
   border: none;
+  border-radius: 30px;
   margin-top: 2rem;
   border-radius: 5px;
 }
 .popular-section a {
   text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "Gluten";
+  letter-spacing: 1px;
+}
+.popular-section:hover .popular-title__container,
+.popular-section:hover .popular-section__img {
+  transform: none;
 }
 
 @media screen and (min-width: 1000px) {
-  .popular-section__cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .popular-section__btn {
     align-self: center;
     font-size: 1.2rem;
+  }
+
+  .popular-section {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .popular-title__container {
+    transform: translate(-2rem, -1rem);
+    padding: 15rem 7rem;
+  }
+  .popular-section__img {
+    height: 830px;
+    max-width: 100%;
+    transform: translate(2rem, 1rem);
   }
 }
