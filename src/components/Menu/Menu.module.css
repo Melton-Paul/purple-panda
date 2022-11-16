@@ -47,7 +47,7 @@
   background: var(--color-primary);
   max-width: 100%;
   margin: 4rem auto;
-  border-radius: 8px;
+  border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .menu-logo__container {
@@ -78,6 +78,7 @@
   background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   width: 100%;
+
   transition: 0.3s all;
 }
 .menu-item:hover {

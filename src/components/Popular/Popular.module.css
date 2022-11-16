@@ -10,7 +10,7 @@
   height: 300px;
   border-radius: 30px;
   object-fit: cover;
-  transform: translate(-0.8rem, 4rem);
+  /* transform: translate(-0.8rem, 4rem); */
   transition: 0.5s all;
 }
 
@@ -19,16 +19,18 @@
   background: var(--color-secondary);
   display: flex;
   max-width: 350px;
-  height: 350px;
+  padding: 2rem 0;
+
+  /* height: 350px; */
   white-space: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   border-radius: 30px;
-  transform: translate(0.7rem, -4rem);
+  /* transform: translate(0.7rem, -4rem); */
   transition: 0.5s all;
-  padding: 10rem 5rem;
+  /* padding: 10rem 5rem; */
   width: 100%;
   box-sizing: border-box;
 }
@@ -42,6 +44,13 @@
   font-size: 1.6rem;
   margin-top: 0;
   border-bottom: 1px solid white;
+}
+.popular-price {
+  color: var(--color-primary);
+  margin: 0.5rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
 }
 
 .popular-section__btn {

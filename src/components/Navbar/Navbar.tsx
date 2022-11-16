@@ -68,7 +68,7 @@ export default function Navbar() {
         </NavLink>
         <li
           className={styles["navbar-list__item"]}
-          onClick={() => goToHomeAndScroll("contact")}
+          onClick={() => goToHomeAndScroll("info")}
         >
           {languageCtx.english ? "Location" : "Ubicación"}
         </li>

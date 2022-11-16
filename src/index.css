@@ -13,6 +13,11 @@ body {
   letter-spacing: 1px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  --tooltip-text-color: white;
+  --tooltip-background-color: black;
+  --tooltip-margin: 40px;
+  --tooltip-arrow-size: 6px;
 }
 
 h1,
@@ -34,6 +39,11 @@ i {
   --color-primary: #00c2cb;
   --color-secondary: #a681f2;
   --color-tertiary: #eb1ec4;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .section-title {

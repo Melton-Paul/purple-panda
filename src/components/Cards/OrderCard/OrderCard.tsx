@@ -6,7 +6,7 @@ const OrderCard = () => {
   const cartCtx = React.useContext(CartContext);
 
   function closeModal() {
-    cartCtx.changeView({ name: "", desc: "", img: "", price: 0 });
+    cartCtx.changeView({ name: "", desc: "", img: "", price: "" });
   }
 
   React.useEffect(() => {

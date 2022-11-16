@@ -6,7 +6,7 @@ const MenuCard: React.FC<{
   name: string;
   desc?: string;
   img?: string;
-  price: number;
+  price: string;
   moreInfo?: boolean;
 }> = ({ name, desc = "", img = "", price, moreInfo = true }) => {
   const cartCtx = React.useContext(CartContext);
@@ -18,7 +18,9 @@ const MenuCard: React.FC<{
     >
       <img src={img} alt="" className={styles["menu-card-img"]} />
       <div className={styles["menu-card__info"]}>
-        <h3 className={styles["menu-card__name"]}>{name}</h3>
+        <h3 className={styles["menu-card__name"]}>
+          {name} <span className={styles["menu-card__price"]}>{price}$</span>
+        </h3>
         <p className={styles["menu-card__desc"]}>{desc}</p>
         {moreInfo && (
           <span className={styles.tip}>

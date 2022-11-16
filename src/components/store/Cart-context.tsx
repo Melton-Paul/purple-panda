@@ -7,13 +7,13 @@ export const CartContext = React.createContext({
     name: "",
     desc: "",
     img: "",
-    price: 0,
+    price: "",
   },
   changeView: (obj: {
     name: string;
     desc: string;
     img: string;
-    price: number;
+    price: string;
   }) => {},
 });
 
@@ -26,7 +26,7 @@ const CartContextProvider: React.FC<{
     name: "",
     desc: "",
     img: "",
-    price: 0,
+    price: "",
   });
 
   function addItem() {
@@ -37,7 +37,7 @@ const CartContextProvider: React.FC<{
     name: string;
     desc: string;
     img: string;
-    price: number;
+    price: string;
   }) {
     setInView(obj);
   }

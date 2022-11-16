@@ -1,10 +1,25 @@
 import React from "react";
 import MenuCard from "../Cards/MenuCard/MenuCard";
 import styles from "./Menu.module.css";
+import { MenuContext } from "../store/Menu-context";
 const logo = require("../../images/tPanda.png");
 const temp = require("../../images/temp.jpg");
 
 const Menu = () => {
+  const menuCtx = React.useContext(MenuContext);
+  const menuHtml = menuCtx.menu.map((menuItem) => {
+    return (
+      <div className={styles["menu-item"]}>
+        <MenuCard
+          name={menuItem.name}
+          desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
+          img={menuItem.img}
+          price={menuItem.price}
+        />
+      </div>
+    );
+  });
+
   return (
     <div className={styles.menu}>
       <div className={styles["menu-card"]}>
@@ -33,96 +48,7 @@ const Menu = () => {
         </div>
         <div className={styles["menu-section"]}>
           <h3 className={styles["menu-section__title"]}>Entrees</h3>
-          <div className={styles["menu-section__items"]}>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-            <div className={styles["menu-item"]}>
-              <MenuCard
-                name="Garlic Noodles"
-                desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
-                img={temp}
-                price={5.99}
-              />
-            </div>
-          </div>
+          <div className={styles["menu-section__items"]}>{menuHtml}</div>
         </div>
         <div className={styles["menu-section"]}>
           <h3 className={styles["menu-section__title"]}>Sauces</h3>
@@ -132,7 +58,7 @@ const Menu = () => {
                 name="Vinegar, Onion & Chili"
                 moreInfo={false}
                 img={temp}
-                price={5.99}
+                price={"5.99"}
               />
             </div>
             <div className={styles["menu-item"]}>
@@ -140,7 +66,7 @@ const Menu = () => {
                 name="Lechon Sauce"
                 moreInfo={false}
                 img={temp}
-                price={5.99}
+                price={"5.99"}
               />
             </div>
             <div className={styles["menu-item"]}>
@@ -148,14 +74,14 @@ const Menu = () => {
                 name="Panda Sauce"
                 moreInfo={false}
                 img={temp}
-                price={5.99}
+                price={"5.99"}
               />
             </div>
             <div className={styles["menu-item"]}>
               <MenuCard
                 name="Soy & Lemon"
                 img={temp}
-                price={5.99}
+                price={"5.99"}
                 moreInfo={false}
               />
             </div>
