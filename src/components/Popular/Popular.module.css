@@ -10,7 +10,7 @@
   height: 300px;
   border-radius: 30px;
   object-fit: cover;
-  /* transform: translate(-0.8rem, 4rem); */
+  transform: translate(-0.8rem, 2rem);
   transition: 0.5s all;
 }
 
@@ -20,17 +20,16 @@
   display: flex;
   max-width: 350px;
   padding: 2rem 0;
-
-  /* height: 350px; */
+  height: 350px;
   white-space: nowrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
   border-radius: 30px;
-  /* transform: translate(0.7rem, -4rem); */
+  transform: translate(0.7rem, -4rem);
   transition: 0.5s all;
-  /* padding: 10rem 5rem; */
+  padding: 10rem 5rem;
   width: 100%;
   box-sizing: border-box;
 }
@@ -80,11 +79,11 @@
 @media screen and (min-width: 400px) {
   .popular-section__img {
     max-width: 400px;
-    transform: translate(-2rem, 2rem);
+    transform: translate(-0.3rem, 2rem);
   }
   .popular-title__container {
     max-width: 400px;
-    transform: translate(2.5rem, -4rem);
+    transform: translate(0.3rem, -3rem);
   }
 }
 
