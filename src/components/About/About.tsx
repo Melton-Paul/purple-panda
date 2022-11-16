@@ -14,7 +14,7 @@ const About = () => {
             className={styles["about-img"]}
           />
           <div className={styles["about-text__container"]}>
-            <h3 className="section-title">Our Journey</h3>
+            <h2 className="section-title">Our Journey</h2>
             <p className={styles["about-text"]}>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
               voluptates odio deleniti ad harum ducimus, et libero similique,

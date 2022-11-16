@@ -64,6 +64,7 @@
 @media screen and (min-width: 768px) {
   .about-container {
     margin: 4rem auto;
+    overflow: inherit;
   }
   .about {
     grid-template-columns: repeat(2, 1fr);
@@ -73,13 +74,10 @@
     max-width: 100%;
     height: 600px;
     order: 2;
-    border-radius: 30px;
   }
   .about-text__container {
     max-width: 100%;
     height: 600px;
-    border-radius: 30px;
-
     transform: translate(2rem, -1rem);
     padding: 5rem;
   }

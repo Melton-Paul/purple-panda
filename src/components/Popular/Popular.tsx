@@ -7,15 +7,13 @@ const Popular = () => {
   const menuCtx = React.useContext(MenuContext);
   return (
     <div className={styles["popular-section"]}>
-      <Link to="/menu">
-        <img
-          src={menuCtx.special.img}
-          alt="Todays special"
-          className={styles["popular-section__img"]}
-        />
-      </Link>
+      <img
+        src={menuCtx.special.img}
+        alt="Todays special"
+        className={styles["popular-section__img"]}
+      />
       <div className={styles["popular-title__container"]}>
-        <h2 className={styles["popular-title"]}>Today's Special</h2>
+        <h2 className={"section-title"}>Today's Special</h2>
         <p className={styles["popular-name"]}>
           {menuCtx.special.name}{" "}
           <span className={styles["popular-price"]}>

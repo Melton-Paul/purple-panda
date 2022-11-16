@@ -7,7 +7,7 @@ const Info = () => {
     <Element name="info">
       <div className={styles["contact-section"]}>
         <div className="container">
-          <h3 className="section-title">Our Info</h3>
+          <h2 className="section-title">Our Info</h2>
           <div className={styles["contact-container"]}>
             <div className={styles["contact-container__text"]}>
               <ul className={styles["contact-list"]}>
