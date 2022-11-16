@@ -22,7 +22,6 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  console.log(scrollVal);
   return (
     <main>
       <Navbar />

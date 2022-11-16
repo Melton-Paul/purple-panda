@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Popular.module.css";
 import { Link } from "react-router-dom";
 import { MenuContext } from "../store/Menu-context";
-const test = require("../../images/test.webp");
 
 const Popular = () => {
   const menuCtx = React.useContext(MenuContext);
