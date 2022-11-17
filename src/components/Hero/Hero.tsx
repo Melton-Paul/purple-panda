@@ -1,10 +1,13 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import styles from "./Hero.module.css";
+import { LanguageContext } from "../store/Language-context";
 const food = require("../../images/food1.jpg");
 const truck = require("../../images/truck.jpg");
 
 export default function Hero() {
+  const languageCtx = React.useContext(LanguageContext);
+
   const calllines = [
     {
       title: "Purple Panda",
@@ -15,14 +18,15 @@ export default function Hero() {
       background: truck,
     },
     {
-      title: "Authentic Food",
-      cta: "Genuinely Filipino.",
+      title: languageCtx.english ? "Authentic Food" : "Tunay na Pagkain",
+      cta: languageCtx.english ? "Genuinely Filipino." : "Filipino talaga.",
       ctaBtn: "Menu",
       ctaAct: "",
       ctaLoc: "/menu",
       background: food,
     },
   ];
+
   const [counter, setCounter] = React.useState(0);
   const navigate = useNavigate();
 
@@ -88,7 +92,9 @@ export default function Hero() {
           ></i>
         </div>
         <div className={styles["hero-brands"]}>
-          <p className={styles["hero-brands__title"]}>Follow Us!</p>
+          <p className={styles["hero-brands__title"]}>
+            {languageCtx.english ? "Follow Us!" : "Sundan mo kami!"}
+          </p>
           <div>
             <a
               href="https://www.instagram.com/purplepandafilipinofood/"

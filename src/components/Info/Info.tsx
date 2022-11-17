@@ -1,43 +1,70 @@
 import React from "react";
 import styles from "./Info.module.css";
 import { Element } from "react-scroll";
+import { LanguageContext } from "../store/Language-context";
 
 const Info = () => {
+  const languageCtx = React.useContext(LanguageContext);
+
+  const languageObj = languageCtx.english
+    ? {
+        h2: "Our Info!",
+        mn: "Monday",
+        ts: "Tuesday",
+        wd: "Wednesday",
+        th: "Thursday",
+        fr: "Friday",
+        st: "Saturday",
+        sn: "Sunday",
+      }
+    : {
+        h2: "Aming Impormasyon!",
+        mn: "Lunes",
+        ts: "Martes",
+        wd: "Miyerkules",
+        th: "Huwebes",
+        fr: "Biyernes",
+        st: "Sabado",
+        sn: "Linggo",
+      };
+
+  const { h2, mn, ts, wd, th, fr, st, sn } = languageObj;
+
   return (
     <Element name="info">
       <div className={styles["contact-section"]}>
         <div className="container">
-          <h2 className="section-title">Our Info</h2>
+          <h2 className="section-title">{h2}</h2>
           <div className={styles["contact-container"]}>
             <div className={styles["contact-container__text"]}>
               <ul className={styles["contact-list"]}>
                 <li>
-                  <p>Monday</p>
+                  <p>{mn}</p>
                   <p>11:00 AM - 8:00 PM</p>
                 </li>
                 <li>
-                  <p>Tuesday</p>
+                  <p>{ts}</p>
                   <p>Closed</p>
                 </li>
                 <li>
-                  <p>Wednesday</p>
+                  <p>{wd}</p>
                   <p>Closed</p>
                 </li>
                 <li>
-                  <p>Thursday</p>
+                  <p>{th}</p>
                   <p>11:00 AM - 8:00 PM</p>
                 </li>
                 <li>
-                  <p>Friday</p>
+                  <p>{fr}</p>
                   <p>11:00 AM - 8:00 PM</p>
                 </li>
                 <li>
-                  <p>Saturday</p>
+                  <p>{st}</p>
                   <p>11:00 AM - 8:00 PM</p>
                 </li>
 
                 <li>
-                  <p>Sunday</p>
+                  <p>{sn}</p>
                   <p>11:00 AM - 6:00 PM</p>
                 </li>
               </ul>

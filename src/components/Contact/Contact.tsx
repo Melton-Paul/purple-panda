@@ -3,19 +3,34 @@ import EmailForm from "./EmailForm";
 import styles from "./Contact.module.css";
 import Button from "../UI/Button/Button";
 import ToolTip from "../UI/ToolTip/ToolTip";
+import { LanguageContext } from "../store/Language-context";
 import { Element } from "react-scroll";
 
 export default function Contact() {
+  const languageCtx = React.useContext(LanguageContext);
+
+  const languageObj = languageCtx.english
+    ? {
+        h2: "Get In Touch!",
+        h3: "Contact Options",
+        call: "Give us a call",
+      }
+    : {
+        h2: "Makipag-ugnayan!",
+        h3: "Iba pang paraan",
+        call: "Tawagan mo kami",
+      };
+
   return (
     <Element name="contact">
       <div className={styles["contact-background"]}>
         <article className={`${styles.contact} container`}>
-          <h2 className="section-title">Get In Touch!</h2>
+          <h2 className="section-title">{languageObj.h2}</h2>
           <div className={styles["contact--options__container"]}>
             <EmailForm />
             <div className={styles["contact--options"]}>
               <h3 className={styles["contact--options__title"]}>
-                Contact Us In <br /> Other Ways
+                {languageObj.h3}
               </h3>
               <ul className={styles["contact--options__tags"]}>
                 <li>
@@ -26,7 +41,7 @@ export default function Contact() {
                       target="_blank"
                       link={true}
                     >
-                      Give us a Call
+                      {languageObj.call}
                     </Button>
                   </ToolTip>
                 </li>

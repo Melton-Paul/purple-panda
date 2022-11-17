@@ -2,6 +2,7 @@ import React from "react";
 import MenuCard from "../Cards/MenuCard/MenuCard";
 import styles from "./Menu.module.css";
 import { MenuContext } from "../store/Menu-context";
+import { LanguageContext } from "../store/Language-context";
 const logo = require("../../images/tPanda.png");
 const temp = require("../../images/temp.jpg");
 
@@ -19,6 +20,21 @@ const Menu = () => {
       </div>
     );
   });
+  const languageCtx = React.useContext(LanguageContext);
+
+  const languageObj = languageCtx.english
+    ? {
+        entree: "Entrees",
+        sauces: "Sauces",
+        drinks: "Drinks",
+      }
+    : {
+        entree: "Mga pagkain      ",
+        sauces: "Mga sarsa",
+        drinks: "Mga inumin",
+      };
+
+  const { entree, sauces, drinks } = languageObj;
 
   return (
     <div className={styles.menu}>
@@ -47,11 +63,11 @@ const Menu = () => {
           </div>
         </div>
         <div className={styles["menu-section"]}>
-          <h3 className={styles["menu-section__title"]}>Entrees</h3>
+          <h3 className={styles["menu-section__title"]}>{entree}</h3>
           <div className={styles["menu-section__items"]}>{menuHtml}</div>
         </div>
         <div className={styles["menu-section"]}>
-          <h3 className={styles["menu-section__title"]}>Sauces</h3>
+          <h3 className={styles["menu-section__title"]}>{sauces}</h3>
           <div className={styles["menu-section__items"]}>
             <div className={styles["menu-item"]}>
               <MenuCard
@@ -88,7 +104,7 @@ const Menu = () => {
           </div>
         </div>
         <div className={styles["menu-section"]}>
-          <h3 className={styles["menu-section__title"]}>Drinks</h3>
+          <h3 className={styles["menu-section__title"]}>{drinks}</h3>
           <ul
             className={
               styles["menu-drinks"] + " " + styles["menu-section__items"]

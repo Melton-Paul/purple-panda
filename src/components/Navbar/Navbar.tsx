@@ -32,6 +32,24 @@ export default function Navbar() {
     );
   };
 
+  const languageObj = languageCtx.english
+    ? {
+        home: "Home",
+        location: "Location",
+        contact: "Contact",
+        about: "About Us",
+        call: "Call",
+      }
+    : {
+        home: "Bahay",
+        location: "Lokasyon",
+        contact: "Makipag-ugnayan",
+        about: "Tungkol sa",
+        call: "Tawag",
+      };
+
+  const { home, location, contact, about, call } = languageObj;
+
   return (
     <nav className={styles.navbar}>
       <div className={styles["navbar-left"]}>
@@ -62,21 +80,19 @@ export default function Navbar() {
         onClick={closeMenu}
       >
         <NavLink to="/">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Home" : "Hogar"}
-          </li>
+          <li className={styles["navbar-list__item"]}>{home}</li>
         </NavLink>
         <li
           className={styles["navbar-list__item"]}
           onClick={() => goToHomeAndScroll("info")}
         >
-          {languageCtx.english ? "Location" : "Ubicación"}
+          {location}
         </li>
         <li
           className={styles["navbar-list__item"]}
           onClick={() => goToHomeAndScroll("contact")}
         >
-          {languageCtx.english ? "Contact" : "Contacto"}
+          {contact}
         </li>
         <li>
           <NavLink to="/">
@@ -93,12 +109,10 @@ export default function Navbar() {
             goToHomeAndScroll("about");
           }}
         >
-          {languageCtx.english ? "About Us" : "Comprar"}
+          {about}
         </li>
         <NavLink to="/menu">
-          <li className={styles["navbar-list__item"]}>
-            {languageCtx.english ? "Menu" : "Menú"}
-          </li>
+          <li className={styles["navbar-list__item"]}>Menu</li>
         </NavLink>
         <li className={styles["navbar-list__item"]}>
           <a
@@ -106,7 +120,7 @@ export default function Navbar() {
             className={`${styles.call} ${styles["call-primary"]}`}
           >
             <i className="fa-solid fa-phone"></i>
-            <p>Call</p>
+            <p>{call}</p>
           </a>
         </li>
       </ul>
