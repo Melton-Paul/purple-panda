@@ -78,7 +78,6 @@ export default function AuthForm() {
           data.localId,
           expirationTime.toISOString()
         );
-        console.log(data);
       })
       .catch((err) => {
         setError(err.message);

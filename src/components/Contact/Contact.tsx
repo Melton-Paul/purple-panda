@@ -1,8 +1,6 @@
 import React from "react";
 import EmailForm from "./EmailForm";
 import styles from "./Contact.module.css";
-import Button from "../UI/Button/Button";
-import ToolTip from "../UI/ToolTip/ToolTip";
 import { LanguageContext } from "../store/Language-context";
 import { Element } from "react-scroll";
 
@@ -26,7 +24,6 @@ export default function Contact() {
     <Element name="contact">
       <div className={styles["contact-background"]}>
         <article className={`${styles.contact} container`}>
-          {/* <h2 className="section-title">{languageObj.h2}</h2> */}
           <div className={styles["contact--options__container"]}>
             <div className={styles["contact--options"]}>
               <h3 className="section-title">{languageObj.h3}</h3>
