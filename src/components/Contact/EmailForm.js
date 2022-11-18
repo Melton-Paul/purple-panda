@@ -70,6 +70,7 @@ export default function EmailForm() {
               errors={state.errors}
             />
           </div>
+
           <div className={styles["input--section"]}>
             <label htmlFor="message">{message}:</label>
             <textarea

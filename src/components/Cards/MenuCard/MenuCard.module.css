@@ -48,6 +48,7 @@
     rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 .menu-card__name {
+  font-size: 1.05rem;
   margin-top: 1rem;
 }
 

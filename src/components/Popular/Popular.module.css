@@ -80,11 +80,9 @@
   .popular-section__img {
     max-width: 400px;
     width: 100%;
-    /* transform: translate(-0.3rem, 2rem); */
   }
   .popular-title__container {
     max-width: 400px;
-    /* transform: translate(0.3rem, -3rem); */
   }
 }
 
@@ -100,7 +98,7 @@
   .popular-section {
     max-width: 1600px;
     margin: 4rem auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 50%);
     overflow: inherit;
   }
   .popular-title__container {

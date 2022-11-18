@@ -1,0 +1,94 @@
+.auth {
+  margin: 20rem auto;
+  margin-bottom: 18.9rem;
+  width: 100%;
+  max-width: 40rem;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.auth input {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 1rem 0.5rem;
+}
+
+.auth h1 {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.auth .invalid {
+  color: red;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+.control {
+  margin-bottom: 3rem;
+}
+
+.control label {
+  display: block;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions .toggle {
+  border: none;
+  background-color: transparent;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.actions button {
+  padding: 1rem 3.5rem;
+}
+.actions .toggle:hover {
+  color: var(--primary-color);
+}
+
+.loading {
+  width: 20px;
+}
+
+.autofill-container {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: white;
+  margin-left: 1rem;
+}
+.autofill-container button {
+  margin-right: 1rem;
+  background: rgb(31, 101, 110);
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+.autofill-container button:hover {
+  opacity: 0.8;
+}

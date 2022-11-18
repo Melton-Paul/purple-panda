@@ -14,46 +14,57 @@
   padding: 1rem;
   box-sizing: border-box;
 }
+.contact-body {
+  color: white;
+  opacity: 0.9;
+  padding: 0 1rem;
+  font-weight: bold;
+  margin-top: 0;
+  font-size: 1.1rem;
+}
 
 .contact--options__container {
   width: 100%;
   display: grid;
   gap: 0 2rem;
-  margin-top: 1rem;
 }
+
 .contact--options {
   text-align: center;
-  border-top: 5px solid aliceblue;
   border-radius: 5px;
-  margin: 6rem 0;
+  margin: 3rem 0;
   padding-top: 3rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background: rgba(102, 186, 189, 0.8);
+  backdrop-filter: blur(3px);
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
-.contact--options__title {
-  margin-top: 1rem;
-  letter-spacing: 1px;
-  word-spacing: 4px;
+.email {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  opacity: 0.85;
+}
+.phone {
+  margin-top: 0.2rem;
+  font-size: 1.4rem;
+  opacity: 0.85;
+}
+
+.hero-brands__link {
+  margin: 0 0.5rem;
+  font-size: 2rem;
   color: white;
-  text-shadow: 1px 1px 10px rgb(0 0 0 / 90%);
-  font-size: 2.4rem;
+  opacity: 0.85;
 }
-
-.contact--options__tags {
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  align-items: center;
-  padding: 0;
-}
-
-.contact--options__tags li {
-  margin: 1.5rem 0;
-}
-.link {
-  font-size: 1.5rem;
+.hero-brands__link:hover i {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {
@@ -70,10 +81,16 @@
   .contact--options {
     padding-top: 0;
     margin: 0;
-    padding-bottom: 5rem;
     border: 0;
-    border-left: 5px solid aliceblue;
+    order: 2;
     margin-left: 4rem;
+  }
+  .contact--options li div {
+    width: 100%;
+  }
+  .contact--options button {
+    width: 100%;
+    align-self: stretch;
   }
   .contact--options__title {
     font-size: 2.2rem;

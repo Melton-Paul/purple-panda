@@ -8,6 +8,7 @@ import CartContextProvider from "./components/store/Cart-context";
 import LanguageContextProvider from "./components/store/Language-context";
 import ScrollToTop from "./components/scrollToTop";
 import MenuContextProvider from "./components/store/Menu-context";
+import { AuthContextProvider } from "./components/store/auth-context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -15,12 +16,14 @@ const root = ReactDOM.createRoot(
 root.render(
   <LanguageContextProvider>
     <CartContextProvider>
-      <MenuContextProvider>
-        <BrowserRouter>
-          <ScrollToTop />
-          <App />
-        </BrowserRouter>
-      </MenuContextProvider>
+      <AuthContextProvider>
+        <MenuContextProvider>
+          <BrowserRouter>
+            <ScrollToTop />
+            <App />
+          </BrowserRouter>
+        </MenuContextProvider>
+      </AuthContextProvider>
     </CartContextProvider>
   </LanguageContextProvider>
 );

@@ -12,8 +12,9 @@ export default function Contact() {
   const languageObj = languageCtx.english
     ? {
         h2: "Get In Touch!",
-        h3: "Contact Options",
+        h3: "Contact Us!",
         call: "Give us a call",
+        body: "Get in touch to find out more about offerings, menus, catering and special events.  We specialize in caterings and bring the truck right to your front door! No mess, no stress, no clean up for you!",
       }
     : {
         h2: "Makipag-ugnayan!",
@@ -25,52 +26,37 @@ export default function Contact() {
     <Element name="contact">
       <div className={styles["contact-background"]}>
         <article className={`${styles.contact} container`}>
-          <h2 className="section-title">{languageObj.h2}</h2>
+          {/* <h2 className="section-title">{languageObj.h2}</h2> */}
           <div className={styles["contact--options__container"]}>
-            <EmailForm />
             <div className={styles["contact--options"]}>
-              <h3 className={styles["contact--options__title"]}>
-                {languageObj.h3}
-              </h3>
-              <ul className={styles["contact--options__tags"]}>
-                <li>
-                  <ToolTip content="Starts a phone call">
-                    <Button
-                      className={styles.link}
-                      href="https://github.com/Melton-Paul"
-                      target="_blank"
-                      link={true}
-                    >
-                      {languageObj.call}
-                    </Button>
-                  </ToolTip>
-                </li>
-                <li>
-                  <ToolTip content="Goes to our facebook">
-                    <Button
-                      className={styles.link}
-                      href="https://www.linkedin.com/in/paul-m-999361237/"
-                      target="_blank"
-                      link={true}
-                    >
-                      Facebook
-                    </Button>
-                  </ToolTip>
-                </li>
-                <li>
-                  <ToolTip content="Attempts to open your logged in email service">
-                    <Button
-                      className={styles.link}
-                      href="mailto: melton.paul@hotmail.com"
-                      target="_blank"
-                      link={true}
-                    >
-                      Email
-                    </Button>
-                  </ToolTip>
-                </li>
-              </ul>
+              <h3 className="section-title">{languageObj.h3}</h3>
+              <div className={styles["contact-body"]}>
+                <p>{languageObj.body}</p>
+                <p className={styles.email}>
+                  purplepandafilipinofood@gmail.com
+                </p>
+                <p className={styles.phone}>417.791.1529</p>
+                <div>
+                  <a
+                    href="https://www.instagram.com/purplepandafilipinofood/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles["hero-brands__link"]}
+                  >
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/purplepandafilipinofood"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={styles["hero-brands__link"]}
+                  >
+                    <i className="fa-brands fa-facebook"></i>
+                  </a>
+                </div>
+              </div>
             </div>
+            <EmailForm />
           </div>
         </article>
       </div>
