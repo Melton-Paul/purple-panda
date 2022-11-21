@@ -29,10 +29,18 @@ export default function Contact() {
               <h3 className="section-title">{languageObj.h3}</h3>
               <div className={styles["contact-body"]}>
                 <p>{languageObj.body}</p>
-                <p className={styles.email}>
+                <a
+                  href="mailto:purplepandafilipinofood@gmail.com"
+                  className={`${styles.email} ${styles.link}`}
+                >
                   purplepandafilipinofood@gmail.com
-                </p>
-                <p className={styles.phone}>417.791.1529</p>
+                </a>
+                <a
+                  href="tel:417-791-1529"
+                  className={`${styles.phone} ${styles.link}`}
+                >
+                  417.791.1529
+                </a>
                 <div>
                   <a
                     href="https://www.instagram.com/purplepandafilipinofood/"

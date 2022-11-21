@@ -44,24 +44,32 @@
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+.link {
+  color: white;
+  display: block;
+  opacity: 0.85;
+  text-decoration: none;
+  transition: 0.3s all;
+}
+.link:hover {
+  opacity: 1;
+}
 
 .email {
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 1.1rem;
   margin-bottom: 0;
-  opacity: 0.85;
 }
 .phone {
   margin-top: 0.2rem;
+  margin-bottom: 1rem;
   font-size: 1.4rem;
-  opacity: 0.85;
 }
 
 .hero-brands__link {
   margin: 0 0.5rem;
   font-size: 2rem;
   color: white;
-  opacity: 0.85;
 }
 .hero-brands__link:hover i {
   transform: scale(1.1);
