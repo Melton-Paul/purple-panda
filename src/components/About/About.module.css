@@ -53,11 +53,9 @@
 @media screen and (min-width: 400px) {
   .about-img {
     max-width: 400px;
-    /* transform: translate(-0.2rem, 2rem); */
   }
   .about-text__container {
     max-width: 400px;
-    /* transform: translate(0.3rem, -4rem); */
   }
 }
 

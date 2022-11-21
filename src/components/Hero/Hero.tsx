@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router";
 import styles from "./Hero.module.css";
 import { LanguageContext } from "../store/Language-context";
+import { Element } from "react-scroll";
 const food = require("../../images/food1.jpg");
 const truck = require("../../images/truck.jpg");
 
@@ -69,52 +70,54 @@ export default function Hero() {
   }
 
   return (
-    <section className={styles.hero}>
-      <img
-        src={calllines[counter].background}
-        className={styles["hero-img"]}
-        alt=""
-      />
-      <div className={styles["hero-overlay"]}>
-        <div className={styles["hero-overlay__center"]}>
-          <h1 className={styles["hero-title"]}>{calllines[counter].title}</h1>
-          <p className={styles.cta}>{calllines[counter].cta}</p>
-          <button onClick={buttonClick} className={styles["cta-button"]}>
-            {calllines[counter].ctaBtn}
-          </button>
-          <i
-            className={`${styles.forward} ${styles.arrow} fa-solid fa-arrow-right`}
-            onClick={() => changeSlide("forward")}
-          ></i>
-          <i
-            className={`${styles.back} ${styles.arrow} fa-solid fa-arrow-left`}
-            onClick={() => changeSlide("back")}
-          ></i>
-        </div>
-        <div className={styles["hero-brands"]}>
-          <p className={styles["hero-brands__title"]}>
-            {languageCtx.english ? "Follow Us!" : "Sundan mo kami!"}
-          </p>
-          <div>
-            <a
-              href="https://www.instagram.com/purplepandafilipinofood/"
-              target="_blank"
-              rel="noreferrer"
-              className={styles["hero-brands__link"]}
-            >
-              <i className="fa-brands fa-instagram"></i>
-            </a>
-            <a
-              href="https://www.facebook.com/purplepandafilipinofood"
-              target="_blank"
-              rel="noreferrer"
-              className={styles["hero-brands__link"]}
-            >
-              <i className="fa-brands fa-facebook"></i>
-            </a>
+    <Element name="hero">
+      <section className={styles.hero}>
+        <img
+          src={calllines[counter].background}
+          className={styles["hero-img"]}
+          alt=""
+        />
+        <div className={styles["hero-overlay"]}>
+          <div className={styles["hero-overlay__center"]}>
+            <h1 className={styles["hero-title"]}>{calllines[counter].title}</h1>
+            <p className={styles.cta}>{calllines[counter].cta}</p>
+            <button onClick={buttonClick} className={styles["cta-button"]}>
+              {calllines[counter].ctaBtn}
+            </button>
+            <i
+              className={`${styles.forward} ${styles.arrow} fa-solid fa-arrow-right`}
+              onClick={() => changeSlide("forward")}
+            ></i>
+            <i
+              className={`${styles.back} ${styles.arrow} fa-solid fa-arrow-left`}
+              onClick={() => changeSlide("back")}
+            ></i>
+          </div>
+          <div className={styles["hero-brands"]}>
+            <p className={styles["hero-brands__title"]}>
+              {languageCtx.english ? "Follow Us!" : "Sundan mo kami!"}
+            </p>
+            <div>
+              <a
+                href="https://www.instagram.com/purplepandafilipinofood/"
+                target="_blank"
+                rel="noreferrer"
+                className={styles["hero-brands__link"]}
+              >
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/purplepandafilipinofood"
+                target="_blank"
+                rel="noreferrer"
+                className={styles["hero-brands__link"]}
+              >
+                <i className="fa-brands fa-facebook"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </Element>
   );
 }

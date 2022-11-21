@@ -112,28 +112,32 @@ const Menu = () => {
           >
             <li>
               <div className={styles["menu-item"]}>
-                <p>Water</p>
-                <p>$1.00</p>
+                <h3 className={styles["menu-drinks__name"]}>Water</h3>
+                <p className={styles.price}>$1.00</p>
               </div>
             </li>
             <li>
               <div className={styles["menu-item"]}>
-                <p>Lemon Tea</p> <p>$2.00</p>
+                <h3 className={styles["menu-drinks__name"]}>Lemon Tea</h3>{" "}
+                <p className={styles.price}>$2.00</p>
               </div>
             </li>
             <li>
               <div className={styles["menu-item"]}>
-                <p>Soda</p> <p>$2.00</p>
+                <h3 className={styles["menu-drinks__name"]}>Soda</h3>{" "}
+                <p className={styles.price}>$2.00</p>
               </div>
             </li>
             <li>
               <div className={styles["menu-item"]}>
-                <p>Mango Juice</p> <p>$2.00</p>
+                <h3 className={styles["menu-drinks__name"]}>Mango Juice</h3>{" "}
+                <p className={styles.price}>$2.00</p>
               </div>
             </li>
             <li>
               <div className={styles["menu-item"]}>
-                <p>Coconut Water</p> <p>$2.50</p>
+                <h3 className={styles["menu-drinks__name"]}>Coconut Water</h3>{" "}
+                <p className={styles.price}>$2.50</p>
               </div>
             </li>
           </ul>

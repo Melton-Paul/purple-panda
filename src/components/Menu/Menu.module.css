@@ -78,10 +78,10 @@
   background: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
   width: 100%;
-
   transition: 0.3s all;
 }
 .menu-item:hover {
+  background: rgba(255, 255, 255, 0.8);
   transform: scale(1.05);
 }
 .menu-section {
@@ -100,9 +100,24 @@
 .menu-drinks li .menu-item {
   padding: 1rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
 }
+.menu-drinks__name {
+  font-size: 1.05rem;
+  margin-top: 1rem;
+}
+
+.price {
+  color: white;
+  margin: 0.5rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
 @media screen and (min-width: 1000px) {
   .menu {
     padding: 2rem;

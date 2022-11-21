@@ -79,9 +79,12 @@ export default function Navbar() {
         }`}
         onClick={closeMenu}
       >
-        <NavLink to="/">
-          <li className={styles["navbar-list__item"]}>{home}</li>
-        </NavLink>
+        <li
+          className={styles["navbar-list__item"]}
+          onClick={() => goToHomeAndScroll("hero")}
+        >
+          {home}
+        </li>
         <li
           className={styles["navbar-list__item"]}
           onClick={() => goToHomeAndScroll("info")}

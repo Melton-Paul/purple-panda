@@ -86,13 +86,13 @@
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .popular-section__btn {
     align-self: center;
     font-size: 1.2rem;
   }
   .popular-title {
-    font-size: 3rem;
+    font-size: 2.7rem;
   }
 
   .popular-section {
@@ -111,5 +111,11 @@
     height: 600px;
     max-width: 100%;
     transform: translate(2rem, 2rem);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .popular-title {
+    font-size: 3rem;
   }
 }
