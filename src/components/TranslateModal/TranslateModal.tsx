@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./TranslateModal.module.css";
 import { LanguageContext } from "../store/Language-context";
+import ScrollToTop from "../scrollToTop";
 
 export default function TranslateModal() {
   const LanguageCtx = React.useContext(LanguageContext);
 
   return (
     <>
+      {ScrollToTop}
       <div className={styles["modal-background"]}></div>
       <div className={styles.modal}>
         <div className={styles["modal-title"]}>
