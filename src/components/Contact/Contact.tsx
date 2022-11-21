@@ -32,12 +32,14 @@ export default function Contact() {
                 <a
                   href="mailto:purplepandafilipinofood@gmail.com"
                   className={`${styles.email} ${styles.link}`}
+                  style={{ fontSize: "1.2rem" }}
                 >
                   purplepandafilipinofood@gmail.com
                 </a>
                 <a
                   href="tel:417-791-1529"
                   className={`${styles.phone} ${styles.link}`}
+                  style={{ fontSize: "1.4rem" }}
                 >
                   417.791.1529
                 </a>

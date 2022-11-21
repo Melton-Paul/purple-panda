@@ -57,13 +57,11 @@
 
 .email {
   margin-top: 2rem;
-  font-size: 1.1rem;
   margin-bottom: 0;
 }
 .phone {
-  margin-top: 0.2rem;
+  margin-top: 0.4rem;
   margin-bottom: 1rem;
-  font-size: 1.4rem;
 }
 
 .hero-brands__link {
