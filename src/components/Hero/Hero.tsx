@@ -3,11 +3,46 @@ import { useNavigate } from "react-router";
 import styles from "./Hero.module.css";
 import { LanguageContext } from "../store/Language-context";
 import { Element } from "react-scroll";
-const food = require("../../images/food1.jpg");
-const truck = require("../../images/truck.jpg");
+const food350 = require("../../images/food1_yldgkd_c_scale,w_350.jpg");
+const food881 = require("../../images/food1_yldgkd_c_scale,w_881.jpg");
+const food1273 = require("../../images/food1_yldgkd_c_scale,w_1273.jpg");
+const food1600 = require("../../images/food1_yldgkd_c_scale,w_1600.jpg");
+const truck350 = require("../../images/truck_lbrit7_c_scale,w_350.jpg");
+const truck881 = require("../../images/truck_lbrit7_c_scale,w_925.jpg");
+const truck1273 = require("../../images/truck_lbrit7_c_scale,w_1364.jpg");
+const truck1600 = require("../../images/truck_lbrit7_c_scale,w_1600.jpg");
 
 export default function Hero() {
   const languageCtx = React.useContext(LanguageContext);
+
+  const imagesFood = (
+    <img
+      className={styles["hero-img"]}
+      sizes="(max-width: 1600px) 100vw, 1600px"
+      srcSet={`
+        ${food350} 350w,
+        ${food881} 881w,
+        ${food1273} 1273w,
+        ${food1600} 1600w
+        `}
+      src={food1600}
+      alt=""
+    />
+  );
+  const imagesTruck = (
+    <img
+      className={styles["hero-img"]}
+      sizes="(max-width: 1600px) 100vw, 1600px"
+      srcSet={`
+      ${truck350} 350w,
+      ${truck881} 881w,
+      ${truck1273} 1273w,
+      ${truck1600} 1600w
+      `}
+      src={truck1600}
+      alt=""
+    />
+  );
 
   const calllines = [
     {
@@ -16,7 +51,7 @@ export default function Hero() {
       ctaBtn: "417.791.1529",
       ctaAct: "tel:417-791-1529",
       ctaLoc: "",
-      background: truck,
+      background: imagesTruck,
     },
     {
       title: languageCtx.english ? "Authentic Food" : "Tunay na Pagkain",
@@ -24,7 +59,7 @@ export default function Hero() {
       ctaBtn: "Menu",
       ctaAct: "",
       ctaLoc: "/menu",
-      background: food,
+      background: imagesFood,
     },
   ];
 
@@ -72,11 +107,7 @@ export default function Hero() {
   return (
     <Element name="hero">
       <section className={styles.hero}>
-        <img
-          src={calllines[counter].background}
-          className={styles["hero-img"]}
-          alt=""
-        />
+        {calllines[counter].background}
         <div className={styles["hero-overlay"]}>
           <div className={styles["hero-overlay__center"]}>
             <h1 className={styles["hero-title"]}>{calllines[counter].title}</h1>

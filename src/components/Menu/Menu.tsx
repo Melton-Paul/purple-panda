@@ -4,7 +4,7 @@ import styles from "./Menu.module.css";
 import { MenuContext } from "../store/Menu-context";
 import { LanguageContext } from "../store/Language-context";
 const logo = require("../../images/tPanda.png");
-const temp = require("../../images/temp.jpg");
+const temp = require("../../images/pattern.jpg");
 
 const Menu = () => {
   const menuCtx = React.useContext(MenuContext);

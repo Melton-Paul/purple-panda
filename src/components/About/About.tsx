@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./About.module.css";
 import { Element } from "react-scroll";
 import { LanguageContext } from "../store/Language-context";
-const temp = require("../../images/truck.jpg");
+const temp = require("../../images/truck_lbrit7_c_scale,w_1600.jpg");
 
 const About = () => {
   const languageCtx = React.useContext(LanguageContext);

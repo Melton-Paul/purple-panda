@@ -32,7 +32,7 @@ export default function Contact() {
                 <a
                   href="mailto:purplepandafilipinofood@gmail.com"
                   className={`${styles.email} ${styles.link}`}
-                  style={{ fontSize: "1.2rem" }}
+                  style={{ fontSize: ".9rem" }}
                 >
                   purplepandafilipinofood@gmail.com
                 </a>
