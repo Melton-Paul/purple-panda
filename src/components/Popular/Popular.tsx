@@ -40,9 +40,9 @@ const Popular = () => {
           </span>
         </p>
         <p>{cta}</p>
-        <Link to="/menu" className={styles["popular-section__btn"]}>
+        <a href="tel:417-791-1529" className={styles["popular-section__btn"]}>
           {call}
-        </Link>
+        </a>
         <Link to="/menu" className={styles["popular-section__btn"]}>
           {menu}
         </Link>
