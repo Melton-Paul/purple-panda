@@ -123,7 +123,7 @@ a.call {
   background: hotpink;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 897px) {
   .navbar {
     flex-wrap: nowrap;
     justify-content: center;
