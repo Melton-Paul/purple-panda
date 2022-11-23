@@ -34,7 +34,7 @@ const OrderCard = () => {
             <div className={styles["modal-body"]}>
               <h3 className={styles.name}>{cartCtx.inView.name}</h3>
               <p>{cartCtx.inView.desc}</p>
-              <p className={styles.price}>{cartCtx.inView.price}$</p>
+              <p className={styles.price}>${cartCtx.inView.price}</p>
 
               <button className={styles["btn-cancel"]} onClick={closeModal}>
                 X

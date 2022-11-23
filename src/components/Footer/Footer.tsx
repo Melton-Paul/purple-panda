@@ -15,8 +15,10 @@ const Footer = () => {
         </a>
       </div>
       <div className={styles["footer-info"]}>
-        <p>purplepandafilipinofood@gmail</p>
-        <p>417.791.1529</p>
+        <p>purplepandafilipinofood@gmail.com</p>
+        <a className={styles["footer-link"]} href="tel:417-791-1529">
+          417.791.1529
+        </a>
       </div>
     </div>
   );
