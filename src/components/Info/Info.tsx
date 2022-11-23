@@ -77,6 +77,15 @@ const Info = () => {
                 </div>
                 <div className={styles["contact-info__section"]}>
                   <a
+                    href="https://www.facebook.com/BransonFoodPark"
+                    className={styles["contact-info"]}
+                  >
+                    <i className="fa-solid fa-truck"></i>
+                    Located in the Branson Food Park
+                  </a>
+                </div>
+                <div className={styles["contact-info__section"]}>
+                  <a
                     href="https://www.google.com/maps/dir//2166+State+Hwy+248,+Branson,+MO+65616/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x87cf04b7527403bf:0xe71d03b322d11c5?sa=X&ved=2ahUKEwjLhNKQ0aT7AhVRkmoFHU5uACwQwwV6BAgIEAI"
                     target="_blank"
                     rel="noreferrer"
