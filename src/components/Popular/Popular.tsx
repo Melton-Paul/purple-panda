@@ -3,6 +3,7 @@ import styles from "./Popular.module.css";
 import { Link } from "react-router-dom";
 import { MenuContext } from "../store/Menu-context";
 import { LanguageContext } from "../store/Language-context";
+import MovingSection from "../MovingSection/MovingSection";
 
 const Popular = () => {
   const menuCtx = React.useContext(MenuContext);
@@ -25,29 +26,22 @@ const Popular = () => {
   const { cta, call, menu, h2 } = languageObj;
 
   return (
-    <div className={styles["popular-section"]}>
-      <img
-        src={menuCtx.special.img}
-        alt="Todays special"
-        className={styles["popular-section__img"]}
-      />
-      <div className={styles["popular-title__container"]}>
-        <h2 className={`section-title ${styles["popular-title"]}`}>{h2}</h2>
-        <p className={styles["popular-name"]}>
-          {menuCtx.special.name}{" "}
-          <span className={styles["popular-price"]}>
-            {menuCtx.special.price}$
-          </span>
-        </p>
-        <p>{cta}</p>
-        <a href="tel:417-791-1529" className={styles["popular-section__btn"]}>
-          {call}
-        </a>
-        <Link to="/menu" className={styles["popular-section__btn"]}>
-          {menu}
-        </Link>
-      </div>
-    </div>
+    <MovingSection img={menuCtx.special.img} imgRight={false}>
+      <h2 className={`section-title ${styles["popular-title"]}`}>{h2}</h2>
+      <p className={styles["popular-name"]}>
+        {menuCtx.special.name}{" "}
+        <span className={styles["popular-price"]}>
+          {menuCtx.special.price}$
+        </span>
+      </p>
+      <p>{cta}</p>
+      <a href="tel:417-791-1529" className={styles["popular-section__btn"]}>
+        {call}
+      </a>
+      <Link to="/menu" className={styles["popular-section__btn"]}>
+        {menu}
+      </Link>
+    </MovingSection>
   );
 };
 

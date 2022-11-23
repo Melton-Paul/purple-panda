@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./About.module.css";
 import { Element } from "react-scroll";
 import { LanguageContext } from "../store/Language-context";
+import MovingSection from "../MovingSection/MovingSection";
 const temp = require("../../images/truck_lbrit7_c_scale,w_1600.jpg");
 
 const About = () => {
@@ -32,19 +33,10 @@ const About = () => {
   const { h2, body } = languageObj;
   return (
     <Element name="about">
-      <div className={styles["about-container"]}>
-        <div className={styles.about}>
-          <img
-            src={temp}
-            alt="The owner smiling and waving while leaning out of the food truck window"
-            className={styles["about-img"]}
-          />
-          <div className={styles["about-text__container"]}>
-            <h2 className="section-title">{h2}</h2>
-            <p className={styles["about-text"]}>{body}</p>
-          </div>
-        </div>
-      </div>
+      <MovingSection img={temp} imgRight={true}>
+        <h2 className="section-title">{h2}</h2>
+        <p className={styles["about-text"]}>{body}</p>
+      </MovingSection>
     </Element>
   );
 };
