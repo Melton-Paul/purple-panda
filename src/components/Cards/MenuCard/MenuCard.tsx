@@ -19,7 +19,7 @@ const MenuCard: React.FC<{
       <img src={img} alt="" className={styles["menu-card-img"]} />
       <div className={styles["menu-card__info"]}>
         <h3 className={styles["menu-card__name"]}>
-          {name} <span className={styles["menu-card__price"]}>{price}$</span>
+          {name} <span className={styles["menu-card__price"]}>${price}</span>
         </h3>
         <p className={styles["menu-card__desc"]}>{desc}</p>
         {moreInfo && (

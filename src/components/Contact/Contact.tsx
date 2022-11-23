@@ -12,12 +12,13 @@ export default function Contact() {
         h2: "Get In Touch!",
         h3: "Contact Us!",
         call: "Give us a call",
-        body: "Get in touch to find out more about offerings, menus, catering and special events.  We specialize in caterings and bring the truck right to your front door! No mess, no stress, no clean up for you!",
+        body: "Get in touch to find out more about offerings, menus, catering and special events.  We specialize in caterings and bring the Philippines right to your front door! No mess, no stress!",
       }
     : {
         h2: "Makipag-ugnayan!",
         h3: "Iba pang paraan",
         call: "Tawagan mo kami",
+        body: "Makipag-ugnayan para malaman ang higit pa tungkol sa mga alok, menu, catering at mga espesyal na kaganapan. Dalubhasa kami sa mga catering at dinadala ang Pilipinas sa iyong harapan! Walang gulo, walang stress!",
       };
 
   return (

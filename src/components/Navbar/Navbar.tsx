@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import { scroller } from "react-scroll";
 import { LanguageContext } from "../store/Language-context";
@@ -11,6 +11,7 @@ export default function Navbar() {
   const languageCtx = React.useContext(LanguageContext);
   const navigate = useNavigate();
   const useScroller = scroller;
+  const width = window.innerWidth;
 
   function toggleCollapsed() {
     setIsCollapsed((prev) => !prev);
@@ -26,7 +27,7 @@ export default function Navbar() {
         useScroller.scrollTo(location, {
           duration: 75,
           smooth: true,
-          offset: -300,
+          offset: width < 768 ? -100 : -300,
         }),
       150
     );
@@ -35,9 +36,9 @@ export default function Navbar() {
   const languageObj = languageCtx.english
     ? {
         home: "Home",
-        location: "Location",
-        contact: "Contact",
-        about: "About Us",
+        location: "Our Info",
+        contact: "Contact Us",
+        about: "Our Journey",
         call: "Call",
       }
     : {
@@ -53,9 +54,12 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles["navbar-left"]}>
-        <NavLink to="/" onClick={closeMenu}>
-          <img className={styles["navbar-img"]} src={navImg} alt="home" />
-        </NavLink>
+        <img
+          className={styles["navbar-img"]}
+          src={navImg}
+          alt="home"
+          onClick={() => goToHomeAndScroll("hero")}
+        />
         {isCollapsed && (
           <a
             href="tel:417-791-1529"
@@ -98,13 +102,12 @@ export default function Navbar() {
           {contact}
         </li>
         <li>
-          <NavLink to="/">
-            <img
-              className={`${styles["navbar-img"]} ${styles.bigDisplay}`}
-              src={navImg}
-              alt="home"
-            />
-          </NavLink>
+          <img
+            className={`${styles["navbar-img"]} ${styles.bigDisplay}`}
+            src={navImg}
+            alt="home"
+            onClick={() => goToHomeAndScroll("hero")}
+          />
         </li>
         <li
           className={styles["navbar-list__item"]}
@@ -114,9 +117,9 @@ export default function Navbar() {
         >
           {about}
         </li>
-        <NavLink to="/menu">
+        <Link to="/menu">
           <li className={styles["navbar-list__item"]}>Menu</li>
-        </NavLink>
+        </Link>
         <li className={styles["navbar-list__item"]}>
           <a
             href="tel:417-791-1529"

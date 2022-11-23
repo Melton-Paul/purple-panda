@@ -27,6 +27,7 @@
   cursor: pointer;
   transform: translateY(2px);
   transition: 0.15s all;
+  padding-bottom: 4px;
 }
 .navbar-img.bigDisplay {
   display: none;
