@@ -9,6 +9,7 @@ interface menuItem {
 export const MenuContext = React.createContext({
   menu: [{ name: "", img: "", price: "" }],
   special: { name: "", img: "", price: "" },
+  update: (newSpecial: menuItem, newMenu: menuItem[]) => {},
 });
 
 const MenuContextProvider: React.FC<{
@@ -20,6 +21,11 @@ const MenuContextProvider: React.FC<{
     img: "",
     price: "",
   });
+
+  function update(newSpecial: menuItem, newMenu: menuItem[]) {
+    setSpecial(newSpecial);
+    setMenu(newMenu);
+  }
 
   React.useEffect(() => {
     fetch("https://purplepanda-default-rtdb.firebaseio.com/.json")
@@ -37,6 +43,7 @@ const MenuContextProvider: React.FC<{
   const contextValue = {
     menu,
     special,
+    update,
   };
   return (
     <MenuContext.Provider value={contextValue}>{children}</MenuContext.Provider>
