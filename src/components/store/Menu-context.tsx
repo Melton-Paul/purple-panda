@@ -4,10 +4,11 @@ interface menuItem {
   name: "";
   img: "";
   price: "";
+  hidden: "false";
 }
 
 export const MenuContext = React.createContext({
-  menu: [{ name: "", img: "", price: "" }],
+  menu: [{ name: "", img: "", price: "", hidden: "false" }],
   special: { name: "", img: "", price: "" },
   update: (newSpecial: menuItem, newMenu: menuItem[]) => {},
 });
@@ -33,9 +34,7 @@ const MenuContextProvider: React.FC<{
       .then((data) => {
         setSpecial(data.special);
         for (let menuItem in data.menu) {
-          if (menuItem !== "0") {
-            setMenu((prev) => [...prev, data.menu[menuItem]]);
-          }
+          setMenu((prev) => [...prev, data.menu[menuItem]]);
         }
       });
   }, []);

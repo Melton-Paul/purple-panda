@@ -10,7 +10,10 @@ const Menu = () => {
   const menuCtx = React.useContext(MenuContext);
   const menuHtml = menuCtx.menu.map((menuItem) => {
     return (
-      <div className={styles["menu-item"]}>
+      <div
+        className={styles["menu-item"]}
+        style={{ display: menuItem.hidden === "true" ? "none" : "initial" }}
+      >
         <MenuCard
           name={menuItem.name}
           desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
