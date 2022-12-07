@@ -56,6 +56,11 @@
   margin-bottom: 2rem;
 }
 
+.special-img {
+  width: 100%;
+  max-width: 300px;
+}
+
 .img-upload input {
   padding: 0;
   width: 100%;

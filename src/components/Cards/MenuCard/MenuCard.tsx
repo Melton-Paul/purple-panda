@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./MenuCard.module.css";
-import { CartContext } from "../../store/Cart-context";
+import { OrderCardContext } from "../../store/Cart-context";
 
 const MenuCard: React.FC<{
   name: string;
@@ -9,12 +9,12 @@ const MenuCard: React.FC<{
   price: string;
   moreInfo?: boolean;
 }> = ({ name, desc = "", img = "", price, moreInfo = true }) => {
-  const cartCtx = React.useContext(CartContext);
+  const cardCtx = React.useContext(OrderCardContext);
 
   return (
-    <div
+    <article
       className={styles["menu-card"]}
-      onClick={() => cartCtx.changeView({ name, desc, img, price })}
+      onClick={() => cardCtx.changeView({ name, desc, img, price })}
     >
       <img src={img} alt="" className={styles["menu-card-img"]} />
       <div className={styles["menu-card__info"]}>
@@ -29,7 +29,7 @@ const MenuCard: React.FC<{
           </span>
         )}
       </div>
-    </div>
+    </article>
   );
 };
 

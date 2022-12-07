@@ -32,7 +32,7 @@ const Info = () => {
 
   return (
     <Element name="info">
-      <div className={styles["contact-section"]}>
+      <section className={styles["contact-section"]}>
         <div className="container">
           <h2 className="section-title">{h2}</h2>
           <div className={styles["contact-container"]}>
@@ -107,7 +107,7 @@ const Info = () => {
             ></iframe>
           </div>
         </div>
-      </div>
+      </section>
     </Element>
   );
 };

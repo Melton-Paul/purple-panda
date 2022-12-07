@@ -12,7 +12,6 @@ export default function AuthForm() {
   const [attempts, setAttempts] = React.useState(5);
   const [loading, setLoading] = React.useState(false);
   const authCtx = React.useContext(AuthContext);
-  const navigate = useNavigate();
 
   const emailIsValid = email.includes("@");
   const passwordIsValid = password.length >= 6;
@@ -69,7 +68,6 @@ export default function AuthForm() {
         }
       })
       .then((data) => {
-        navigate("/edit");
         const expirationTime = new Date(
           new Date().getTime() + +data.expiresIn * 1000
         );

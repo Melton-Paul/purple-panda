@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CartContext = React.createContext({
+export const OrderCardContext = React.createContext({
   size: 0,
   items: [],
   inView: {
@@ -17,7 +17,7 @@ export const CartContext = React.createContext({
   }) => {},
 });
 
-const CartContextProvider: React.FC<{
+const OrderCardContextProvider: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   const [size, setSize] = React.useState(0);
@@ -54,8 +54,10 @@ const CartContextProvider: React.FC<{
     addItem,
   };
   return (
-    <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
+    <OrderCardContext.Provider value={contextValue}>
+      {children}
+    </OrderCardContext.Provider>
   );
 };
 
-export default CartContextProvider;
+export default OrderCardContextProvider;

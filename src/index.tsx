@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import CartContextProvider from "./components/store/Cart-context";
+import OrderCartContextProvider from "./components/store/Cart-context";
 import LanguageContextProvider from "./components/store/Language-context";
 import ScrollToTop from "./components/scrollToTop";
 import MenuContextProvider from "./components/store/Menu-context";
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <LanguageContextProvider>
-    <CartContextProvider>
+    <OrderCartContextProvider>
       <AuthContextProvider>
         <MenuContextProvider>
           <BrowserRouter>
@@ -24,6 +24,6 @@ root.render(
           </BrowserRouter>
         </MenuContextProvider>
       </AuthContextProvider>
-    </CartContextProvider>
+    </OrderCartContextProvider>
   </LanguageContextProvider>
 );

@@ -40,7 +40,7 @@ const Menu = () => {
   const { entree, sauces, drinks } = languageObj;
 
   return (
-    <div className={styles.menu}>
+    <section className={styles.menu}>
       <div className={styles["menu-card"]}>
         <div className={styles["menu-header"]}>
           <div className={styles["menu-logo__container"]}>
@@ -146,7 +146,7 @@ const Menu = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Menu;

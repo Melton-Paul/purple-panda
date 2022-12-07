@@ -35,8 +35,10 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="*" element={<MainPage />} />
-        <Route path="/admin" element={<AuthForm />} />
-        {authCtx.isLoggedIn && <Route path="/edit" element={<Edit />} />}
+        <Route
+          path="/admin"
+          element={authCtx.isLoggedIn ? <Edit /> : <AuthForm />}
+        />
       </Routes>
       <OrderCard />
       {scrollVal > 400 && <ScrollTop />}

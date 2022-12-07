@@ -2,7 +2,7 @@ import styles from "./Footer.module.css";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
+    <footer className={styles.footer}>
       <div>
         <p>Copyright &#169; 2022 Purple Panda Filipino Food</p>
         <a
@@ -20,7 +20,7 @@ const Footer = () => {
           417.791.1529
         </a>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;

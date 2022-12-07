@@ -24,7 +24,7 @@ export default function Contact() {
   return (
     <Element name="contact">
       <div className={styles["contact-background"]}>
-        <article className={`${styles.contact} container`}>
+        <section className={`${styles.contact} container`}>
           <div className={styles["contact--options__container"]}>
             <div className={styles["contact--options"]}>
               <h3 className="section-title">{languageObj.h3}</h3>
@@ -66,7 +66,7 @@ export default function Contact() {
             </div>
             <EmailForm />
           </div>
-        </article>
+        </section>
       </div>
     </Element>
   );

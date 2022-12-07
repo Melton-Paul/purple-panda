@@ -1,46 +1,46 @@
 import React from "react";
 import styles from "./OrderCard.module.css";
-import { CartContext } from "../../store/Cart-context";
+import { OrderCardContext } from "../../store/Cart-context";
 
 const OrderCard = () => {
-  const cartCtx = React.useContext(CartContext);
+  const cardCtx = React.useContext(OrderCardContext);
 
   function closeModal() {
-    cartCtx.changeView({ name: "", desc: "", img: "", price: "" });
+    cardCtx.changeView({ name: "", desc: "", img: "", price: "" });
   }
 
   React.useEffect(() => {
-    if (cartCtx.inView.name !== "") {
+    if (cardCtx.inView.name !== "") {
       document.querySelector("body")!.style.overflow = "hidden";
     } else {
       document.querySelector("body")!.style.overflow = "auto";
     }
-  }, [cartCtx.inView.name]);
+  }, [cardCtx.inView.name]);
 
   return (
     <>
-      {cartCtx.inView.name !== "" && (
+      {cardCtx.inView.name !== "" && (
         <>
           <div
             className={styles["modal-background"]}
             onClick={closeModal}
           ></div>
-          <div className={styles.modal} onClick={closeModal}>
+          <section className={styles.modal} onClick={closeModal}>
             <img
               className={styles["modal-img"]}
-              src={cartCtx.inView.img}
+              src={cardCtx.inView.img}
               alt=""
             />
             <div className={styles["modal-body"]}>
-              <h3 className={styles.name}>{cartCtx.inView.name}</h3>
-              <p>{cartCtx.inView.desc}</p>
-              <p className={styles.price}>${cartCtx.inView.price}</p>
+              <h3 className={styles.name}>{cardCtx.inView.name}</h3>
+              <p>{cardCtx.inView.desc}</p>
+              <p className={styles.price}>${cardCtx.inView.price}</p>
 
               <button className={styles["btn-cancel"]} onClick={closeModal}>
                 X
               </button>
             </div>
-          </div>
+          </section>
         </>
       )}
     </>

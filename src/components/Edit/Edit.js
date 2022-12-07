@@ -67,6 +67,7 @@ const Edit = () => {
       name: "",
       price: "",
       img: "",
+      hidden: "false",
     });
   }
 
@@ -92,6 +93,10 @@ const Edit = () => {
   }, [menuCtx]);
 
   React.useEffect(() => {
+    if (menu.length === 0) {
+      return;
+    }
+
     fetch("https://purplepanda-default-rtdb.firebaseio.com/.json", {
       method: "PUT",
       body: JSON.stringify({
@@ -175,7 +180,7 @@ const Edit = () => {
   ));
 
   return (
-    <div className={styles.edit}>
+    <section className={styles.edit}>
       {isDeleting && (
         <div className={styles["delete-module"]}>
           <div className={styles["delete-module--content"]}>
@@ -246,7 +251,11 @@ const Edit = () => {
         <div className={styles["img-upload"]}>
           <label htmlFor="img">
             Image upload:
-            <img src={special.img} alt={special.name} />
+            <img
+              src={special.img}
+              alt={special.name}
+              className={styles["special-img"]}
+            />
           </label>
           <input
             id="img"
@@ -267,7 +276,7 @@ const Edit = () => {
       >
         Add New Menu Item
       </button>
-    </div>
+    </section>
   );
 };
 export default Edit;
