@@ -8,11 +8,11 @@ const Edit = () => {
   const [menu, setMenu] = React.useState(menuCtx.menu);
   const [isDeleting, setIsDeleting] = React.useState("");
   const [isAdding, setIsAdding] = React.useState(false);
-
   const [newItem, setNewItem] = React.useState({
     name: "",
     price: "",
     img: "",
+    desc: "",
     hidden: "false",
   });
 
@@ -108,22 +108,43 @@ const Edit = () => {
 
   const menuHtml = menu.map((menuItem, index) => (
     <form className={styles.form}>
+      <label className={styles.label} htmlFor={menuItem.name}>
+        Item Name
+      </label>
       <input
         value={menuItem.name}
         onChange={(e) => {
           menuHandleChange(e, index);
         }}
+        id={menuItem.name}
         name="name"
         placeholder="Name"
         type="text"
       />
+      <label className={styles.label} htmlFor={menuItem.price}>
+        Item Price
+      </label>
       <input
         onChange={(e) => {
           menuHandleChange(e, index);
         }}
         value={menuItem.price}
         placeholder="Price"
+        id={menuItem.price}
         name="price"
+        type="text"
+      />
+      <label className={styles.label} htmlFor={menuItem.desc}>
+        Item Description
+      </label>
+      <input
+        onChange={(e) => {
+          menuHandleChange(e, index);
+        }}
+        value={menuItem.desc}
+        placeholder="Description"
+        id={menuItem.desc}
+        name="desc"
         type="text"
       />
       <div className={styles["img-upload"]}>
@@ -208,6 +229,13 @@ const Edit = () => {
               value={newItem.price}
               placeholder="Price"
               name="price"
+              type="text"
+            />
+            <input
+              onChange={addChange}
+              value={newItem.desc}
+              placeholder="Description"
+              name="desc"
               type="text"
             />
             {/* <div className={styles["img-upload"]}>

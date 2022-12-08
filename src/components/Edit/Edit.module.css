@@ -75,6 +75,13 @@
   align-items: center;
   width: 100%;
 }
+
+.label {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
 .img-upload img {
   margin-left: 1rem;
 }

@@ -16,7 +16,7 @@ const Menu = () => {
       >
         <MenuCard
           name={menuItem.name}
-          desc="Savory and garlicky pan-friend noodles topped with shaved Parmesan cheese, spicy sesame aiolo, scallions, and cilantro."
+          desc={menuItem.desc}
           img={menuItem.img}
           price={menuItem.price}
         />

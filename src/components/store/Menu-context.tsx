@@ -4,11 +4,12 @@ interface menuItem {
   name: "";
   img: "";
   price: "";
+  desc: "";
   hidden: "false";
 }
 
 export const MenuContext = React.createContext({
-  menu: [{ name: "", img: "", price: "", hidden: "false" }],
+  menu: [{ name: "", img: "", price: "", hidden: "false", desc: "" }],
   special: { name: "", img: "", price: "" },
   update: (newSpecial: menuItem, newMenu: menuItem[]) => {},
 });
