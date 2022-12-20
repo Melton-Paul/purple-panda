@@ -106,7 +106,11 @@ export default function Hero() {
 
   return (
     <Element name="hero">
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        data-aos="slide-right"
+        data-aos-duration="900"
+      >
         {calllines[counter].background}
         <div className={styles["hero-overlay"]}>
           <div className={styles["hero-overlay__center"]}>

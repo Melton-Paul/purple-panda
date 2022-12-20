@@ -28,6 +28,8 @@ const MovingSection: React.FC<{
 
   return (
     <div
+      data-aos="flip-up"
+      data-aos-duration="1200"
       className={styles.container}
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}

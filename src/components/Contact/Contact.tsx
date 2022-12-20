@@ -23,7 +23,11 @@ export default function Contact() {
 
   return (
     <Element name="contact">
-      <div className={styles["contact-background"]}>
+      <div
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+        className={styles["contact-background"]}
+      >
         <section className={`${styles.contact} container`}>
           <div className={styles["contact--options__container"]}>
             <div className={styles["contact--options"]}>

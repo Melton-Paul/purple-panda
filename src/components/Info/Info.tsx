@@ -32,7 +32,11 @@ const Info = () => {
 
   return (
     <Element name="info">
-      <section className={styles["contact-section"]}>
+      <section
+        data-aos="zoom-in-up"
+        data-aos-duration="1000"
+        className={styles["contact-section"]}
+      >
         <div className="container">
           <h2 className="section-title">{h2}</h2>
           <div className={styles["contact-container"]}>

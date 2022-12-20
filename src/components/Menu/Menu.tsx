@@ -41,7 +41,11 @@ const Menu = () => {
 
   return (
     <section className={styles.menu}>
-      <div className={styles["menu-card"]}>
+      <div
+        className={styles["menu-card"]}
+        data-aos="flip-right"
+        data-aos-duration="1000"
+      >
         <div className={styles["menu-header"]}>
           <div className={styles["menu-logo__container"]}>
             <img src={logo} alt="" className={styles["menu-logo"]} />
